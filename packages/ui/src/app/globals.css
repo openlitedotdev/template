@@ -2,35 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'onest-bold';
-  src: url('/fonts/Onest-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'onest-regular';
-  src: url('/fonts/Onest-Regular.ttf');
-}
-@font-face {
-  font-family: 'onest-medium';
-  src: url('/fonts/Onest-Medium.ttf');
-}
-* {
-  /* border: 1px solid red; */
-}
 html,
 body {
   scroll-behavior: smooth;
   font-family: 'onest-regular', sans-serif;
-}
-
-.bghomegradient {
-  background: linear-gradient(
-    to right,
-    rgb(15, 32, 39),
-    rgb(32, 58, 67),
-    rgb(44, 83, 100)
-  );
 }
 
 @keyframes flameAnimation {
@@ -112,4 +87,18 @@ body {
     -webkit-transform: rotate(90deg);
     transform: rotate(290deg);
   }
+}
+
+@font-face {
+  font-family: 'onest-bold';
+  src: url('/fonts/Onest-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'onest-regular';
+  src: url('/fonts/Onest-Regular.ttf');
+}
+@font-face {
+  font-family: 'onest-medium';
+  src: url('/fonts/Onest-Medium.ttf');
 }
