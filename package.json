@@ -2,6 +2,7 @@
   "name": "commerce",
   "type": "module",
   "version": "1.0.0",
+  "packageManager": "pnpm@8.15.4",
   "description": "Open sources commerce",
   "author": "Open Land",
   "license": "MIT",
