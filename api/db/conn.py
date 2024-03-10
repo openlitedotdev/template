@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 # Dev
-SQLALCHEMY_DATABASE_URL = "sqlite:///commerce.sqlite"
+SQLALCHEMY_DATABASE_URL = 'sqlite:///commerce.sqlite'
 
 # Prod
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"

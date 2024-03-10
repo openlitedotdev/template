@@ -9,28 +9,28 @@ import uuid
 router = APIRouter()
 
 
-@router.get("/get")
+@router.get('/get')
 async def get_category(
     db: Session = Depends(get_db), current_user: dict = Depends(get_current_user)
 ):
     user = (
         db.query(models.User)
-        .filter(models.User.email == current_user.get("sub"))
+        .filter(models.User.email == current_user.get('sub'))
         .first()
     )
 
     on_validate_admin(user.role)
 
     categories = db.query(models.Category).all()
-    
+
     return {
-        "message": "Get categoty in commerces",
-        "db": categories,
-        "status": status.HTTP_200_OK,
+        'message': 'Get categoty in commerces',
+        'db': categories,
+        'status': status.HTTP_200_OK,
     }
 
 
-@router.post("/create")
+@router.post('/create')
 async def create_category(
     name: str = Form(),
     image: UploadFile = File(),
@@ -39,7 +39,7 @@ async def create_category(
     current_user: dict = Depends(get_current_user),
 ):
     user = (
-        db.query(models.User).filter(models.User.email == current_user["sub"]).first()
+        db.query(models.User).filter(models.User.email == current_user['sub']).first()
     )
 
     on_validate_admin(user.role)
@@ -55,12 +55,12 @@ async def create_category(
             overwrite=False,
         )
         print(upload_result)
-        image_url = upload_result["secure_url"]
+        image_url = upload_result['secure_url']
 
     except cloudinary.exceptions.Error as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Error uploading the image: {str(e)}",
+            detail=f'Error uploading the image: {str(e)}',
         )
 
     db_user = models.Category(name=name, image=image_url, description=description)
@@ -70,6 +70,6 @@ async def create_category(
     db.refresh(db_user)
 
     return {
-        "message": "new category was created",
-        "status": status.HTTP_200_OK,
+        'message': 'new category was created',
+        'status': status.HTTP_200_OK,
     }

@@ -8,10 +8,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-JWT_SECRET = os.environ.get("JWT_SECRET")
-SECRET_KEY = os.environ.get("SECRET_KEY")
-ACCESS_TOKEN_EXPIRE_MINUTES = os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES")
-ALGORITHM = os.environ.get("ALGORITHM")
+JWT_SECRET = os.environ.get('JWT_SECRET')
+SECRET_KEY = os.environ.get('SECRET_KEY')
+ACCESS_TOKEN_EXPIRE_MINUTES = os.environ.get('ACCESS_TOKEN_EXPIRE_MINUTES')
+ALGORITHM = os.environ.get('ALGORITHM')
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl=JWT_SECRET)
@@ -24,7 +24,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     else:
         expire = datetime.now(timezone.utc) + timedelta(minutes=15)
 
-    to_enconde.update({"exp": expire})
+    to_enconde.update({'exp': expire})
     token = jwt.encode(to_enconde, SECRET_KEY, algorithm=ALGORITHM)
     return token
 
@@ -32,8 +32,8 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
 def get_current_user(token: str = Depends(oauth2_scheme)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Invalid credentials",
-        headers={"WWW-Authenticate": "Bearer"},
+        detail='Invalid credentials',
+        headers={'WWW-Authenticate': 'Bearer'},
     )
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=ALGORITHM)
@@ -53,12 +53,12 @@ def get_db():
 
 
 def on_validate_admin(role: str):
-    if not role == "admin":
+    if not role == 'admin':
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail={
-                "message": "You do not have permission, you must be admin",
-                "db": [],
-                "status": status.HTTP_400_BAD_REQUEST,
+                'message': 'You do not have permission, you must be admin',
+                'db': [],
+                'status': status.HTTP_400_BAD_REQUEST,
             },
         )
