@@ -1,0 +1,8 @@
+exclude = [
+  ".venv",
+  "packages"
+]
+skip-magic-trailing-comma = false
+
+[format]
+quote-style = "single"
