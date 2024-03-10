@@ -1,8 +1,8 @@
 {
   "name": "dashboard",
   "type": "module",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.15.4",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -24,12 +24,10 @@
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "5.20.1",
     "@tanstack/router-vite-plugin": "1.16.5",
-    "@testing-library/react": "14.2.1",
     "@types/node": "20.11.19",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
     "@vitejs/plugin-react-swc": "3.5.0",
-    "jsdom": "24.0.0",
     "typescript": "5.2.2",
     "unocss": "0.58.5",
     "vite": "5.1.0"
