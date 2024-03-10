@@ -9,12 +9,14 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "lint": "pnpm -r --filter=./packages/* lint",
-    "dev": "pnpm -r --filter=./packages/* dev"
+    "dev": "pnpm -r --filter=./packages/* dev",
+    "lint": "eslint . --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "2.7.0",
     "@commitlint/cli": "19.0.3",
     "@commitlint/config-conventional": "19.0.3",
+    "eslint-plugin-format": "0.1.0",
     "husky": "9.0.10"
   },
   "commitlint": {
