@@ -1,0 +1,25 @@
+{
+  "name": "commerce",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "lint": "pnpm -r --filter=./packages/* lint",
+    "dev": "pnpm -r --filter=./packages/* dev"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.0.3",
+    "@commitlint/config-conventional": "19.0.3",
+    "husky": "9.0.10"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
