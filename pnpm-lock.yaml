@@ -38,6 +38,9 @@ importers:
       '@tanstack/router-devtools':
         specifier: 1.16.6
         version: 1.16.6(react-dom@18.2.0)(react@18.2.0)
+      '@unocss/reset':
+        specifier: 0.58.5
+        version: 0.58.5
       lucide-react:
         specifier: 0.336.0
         version: 0.336.0(react@18.2.0)
@@ -2344,7 +2347,6 @@ packages:
 
   /@unocss/reset@0.58.5:
     resolution: {integrity: sha512-2wMrkCj3SSb5hrx9TKs5jZa34QIRkHv9FotbJutAPo7o8hx+XXn56ogzdoUrcFPJZJUx2R2nyOVbSlGMIjtFtw==}
-    dev: true
 
   /@unocss/rule-utils@0.58.5:
     resolution: {integrity: sha512-w0sGJoeUGwMWLVFLEE9PDiv/fQcQqZnTIIQLYNCjTdqXDRlwTp9ACW0h47x/hAAIXdOtEOOBuTfjGD79GznUmA==}
