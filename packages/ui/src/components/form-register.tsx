@@ -58,10 +58,7 @@ export default function FormRegister() {
   const handleRegisterUser = async (e: FormEvent) => {
     e.preventDefault()
 
-    // eslint-disable-next-line node/prefer-global/process
     const url_api = process.env.NEXT_PUBLIC_URL_BACKEND ?? ''
-
-    // Validation UserName
 
     if (user.name.length < 6) {
       setMessageName('The username must be more than 6 characters')
