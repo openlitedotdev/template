@@ -16,12 +16,15 @@ function Home() {
     if (!admin)
       navigate({ to: '/login' })
   }, [admin])
-  console.log('Err')
 
   return (
     <>
-      <LateralMenu style />
-      <Navbar />
+      <div className="flex justify-between">
+        <LateralMenu style />
+        <section className="w-full">
+          <Navbar />
+        </section>
+      </div>
     </>
   )
 }
