@@ -1,6 +1,5 @@
 #! /bin/bash
 
+echo "Running formatting... 🔨"
 
-echo "Running format... 🔨"
-
-ruff format .
+ruff format . --verbose
