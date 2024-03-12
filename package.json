@@ -11,18 +11,23 @@
   "scripts": {
     "prepare": "husky",
     "dev": "pnpm -r --filter=./packages/* dev",
-    "lint": "eslint . --fix"
+    "lint": "eslint . && pnpm -r --filter=./packages/* lint",
+    "build": "pnpm -r --filter=./packages/* build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.7.0",
     "@commitlint/cli": "19.0.3",
     "@commitlint/config-conventional": "19.0.3",
     "eslint-plugin-format": "0.1.0",
-    "husky": "9.0.10"
+    "husky": "9.0.10",
+    "lint-staged": "15.2.2"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
   }
 }
