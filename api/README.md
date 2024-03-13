@@ -2,7 +2,7 @@
 
 ## Mode development
 
-More information in the folder: *docs*
+More information in the folder: _docs_
 
 ## License
 
