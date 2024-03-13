@@ -6,7 +6,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import { useCallback } from 'react'
 import { IconArrowLeft, IconArrowRight } from './icons'
 import { Button } from './ui'
-import { categories } from '@/utils/const'
+import { categories } from '@/lib/const'
 
 export default function CategoriesSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({}, [Autoplay()])

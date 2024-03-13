@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './ui'
 import Carousel from './carousel'
-import { Watch } from '@/utils/const'
+import { Watch } from '@/lib/const'
 
 export default function WathcCarousel() {
   return (

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './ui'
 import Carousel from './carousel'
-import { newest } from '@/utils/const'
+import { newest } from '@/lib/const'
 
 export default function CaruselIphones() {
   return (
