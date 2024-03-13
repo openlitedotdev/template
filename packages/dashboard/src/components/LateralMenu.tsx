@@ -1,6 +1,6 @@
 import { Flame } from 'lucide-react'
-import { bottonlateralmenu, bottonlateralothers, bottonlateraluser } from '../lib/const'
 import type { Props } from 'types/lateralmenu'
+import { bottonlateralmenu, bottonlateralothers, bottonlateraluser } from '../lib/const'
 import ButtonLateralMenu from './ButtonLateralMenu'
 
 export default function LateralMenu(props: Props) {
