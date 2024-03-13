@@ -50,6 +50,7 @@ export const bottonlateralmenu = [
     text: 'Transaction',
   },
 ]
+
 export const bottonlateraluser = [
   {
     href: '/',
@@ -62,6 +63,7 @@ export const bottonlateraluser = [
     text: 'Customers',
   },
 ]
+
 export const bottonlateralothers = [
   {
     href: '/',

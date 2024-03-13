@@ -1,5 +1,5 @@
 import { Flame } from 'lucide-react'
-import { bottonlateralmenu, bottonlateralothers, bottonlateraluser } from '../lib/optionslateralmenu'
+import { bottonlateralmenu, bottonlateralothers, bottonlateraluser } from '../lib/const'
 import type { Props } from 'types/lateralmenu'
 import ButtonLateralMenu from './ButtonLateralMenu'
 
