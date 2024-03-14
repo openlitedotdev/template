@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import logoPng from 'public/png/logo.png'
 import { IconLogo } from './icons'
-import { navbar } from '@/utils/const'
+import { navbar } from '@/lib/const'
 
 interface Props {
   background?: string

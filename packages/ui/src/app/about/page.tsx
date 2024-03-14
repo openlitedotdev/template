@@ -5,7 +5,7 @@ import aboutProfile from 'public/png/about-profile.png'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Network } from '@/components/icons'
-import { infoAbout } from '@/utils/const'
+import { infoAbout } from '@/lib/const'
 import Navbar from '@/components/navbar'
 
 export const metadata: Metadata = {

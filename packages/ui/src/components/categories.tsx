@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Carousel from './carousel'
-import { categories } from '@/utils/const'
+import { categories } from '@/lib/const'
 
 export default function Categories() {
   return (
