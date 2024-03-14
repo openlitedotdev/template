@@ -9,63 +9,53 @@ export default function Login() {
   return (
     <>
       <section
-        className="h-screen flex flex-col items-center justify-center"
+        className="flex-and-col items-center justify-center md:p-10 w-full"
       >
-        <div className="flex flex-col gap-4 sm:flex-row sm:gap-24">
-          <figure className="hidden xl:block">
+        <div className="flex w-full items-center ">
+          <figure className="hidden lg:block w-1/2">
             <img src="/png/hero.png" alt="logo-image" />
           </figure>
           <form
-            className="relative h-auto w-full border border-[#E4E7E9] rounded-[20px] p-[20px] shadow-md sm:h-[616px] sm:w-[613px] sm:p-[40px]"
-            action=""
+            className="relative flex-and-col justify-center gap-7 md:justify-evenly w-full lg:w-50% border border-[#E4E7E9] rounded-md shadow-md p-5 md:p-20 lg:min-h-screen"
           >
-            <h2 className="text-2xl font-bold text-sad">Commerce</h2>
-            <h3 className="text-[24px] text-sad font-bold">Login</h3>
-            <div className="flex flex-col">
-              <label className="margin-label text-sad">Email</label>
-              <div
-                className="transform text-sad -translate-y-1/2"
-                position="absolute left-[35px] top-[182px]"
-                sm="left-[55px] top-[202px]"
-              >
-                <Mail />
+            <h2 className="text-2xl text-center font-bold text-sad">Commerce</h2>
+            <h3 className="text-2xl text-center text-sad font-bold">Login</h3>
+            <figure>
+              <label className="text-sad">Email</label>
+              <div className="flex-and-col text-sad relative">
+                <input
+                  className="input-border"
+                  id="email"
+                  type="email"
+                  placeholder="jhondoe@gmail.com"
+                />
+                <Mail className="position-icons" />
               </div>
-              <input
-                className="input-border h-[44px]"
-                id="email"
-                type="email"
-                placeholder="jhondoe@gmail.com"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label className="margin-label text-sad">Password</label>
-              <div
-                className="transform text-sad -translate-y-1/2"
-                position="absolute left-[35px] top-[182px]"
-                sm="left-[55px] top-[202px]"
-              >
-                <LockKeyhole />
+            </figure>
+            <figure>
+              <label className="text-sad">Password</label>
+              <div className="flex-and-col text-sad relative">
+                <input
+                  className="input-border"
+                  id="password"
+                  type="password"
+                  placeholder="Enter your password"
+                />
+                <LockKeyhole className="position-icons" />
               </div>
-              <input
-                className="input-border h-[44px]"
-                id="password"
-                type="password"
-                placeholder="Enter your password"
-              />
-            </div>
-            <p className="mb-[15px] mt-[15px] text-center text-base text-[#3858D6] font-semibold">
+            </figure>
+            <p className="text-center text-base text-[#3858D6] font-semibold">
               Forgot password?
             </p>
             <button
-              className="m-auto block h-[44px] w-full rounded-[8px] bg-[#3858D6] text-white font-bold"
-              sm="w-[535px]"
+              className="w-full rounded-md py-2 bg-[#3858D6] text-white font-bold"
             >
               Login
             </button>
           </form>
         </div>
       </section>
-      <footer className="mt w-full bg-black py-4">
+      <footer className="w-full bg-black py-4 bottom-0 sm:absolute md:relative">
         <p className="text-sad">
           @copyrigth - Todos los derechos reservado
         </p>
