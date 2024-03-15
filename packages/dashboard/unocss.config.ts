@@ -5,10 +5,11 @@ export default defineConfig({
   shortcuts: {
     'flexbox': 'flex justify-center items-center',
     'flexbox-col': 'flex flex-col justify-center items-center',
-    'margin-label': ' mt-[15px] mb-[5px]',
-    'input-border': ' border border-[#E4E7E9] rounded-[8px] shadow-sm box-border pl-[50px]',
+    'style-border': ' border border-[#E4E7E9] rounded-md shadow-sm box-border pl-10 py-1',
     'text-sad': 'text-[#8B8E99]',
-    'flex-col': 'flex flex-col',
     'text-blue': 'text-[#3858D6]',
+    'flex-and-col': 'flex flex-col',
+    'position-icons': 'absolute top-1/2 transform -translate-y-1/2 left-3',
+    'stile-form': 'w-full lg:w-50% lg:min-h-screen',
   },
 })
