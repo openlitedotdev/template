@@ -18,7 +18,7 @@ const [acme, setAcme] = useState(0) // ✔
 
 ## Functions Events
 
-Event functions always have to start with the word `on`
+Event functions always have to start with the word `on`Ñ
 
 #### Example
 

@@ -8,8 +8,8 @@ import { newest } from '@/utils/const'
 
 export default function CaruselIphones() {
   return (
-    <section className="max-w-7xl mx-auto mt-10 py-10">
-      <Carousel className="flex gap-5 md:gap-4" buttons>
+    <section className="max-w-7xl mx-auto mt-10 py-10 relative">
+      <Carousel className="flex gap-5 md:gap-4  " buttons>
         {newest.map((data, index) => (
           <Link
             href="/"

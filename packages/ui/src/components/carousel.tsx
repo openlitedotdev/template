@@ -62,19 +62,19 @@ export default function Carousel({
   }, [emblaApi, onSelect])
 
   return (
-    <div ref={emblaNode} className="overflow-hidden relative ml-2">
+    <div ref={emblaNode} className="overflow-hidden ">
       <div {...props}>{children}</div>
       {buttons && (
         <>
           <Button
-            className="absolute top-1/2 left-1 disabled:opacity-0 transition-colors bg-indigo/60 text-white rounded-full flex items-center justify-center text-center p-0.5"
+            className="absolute top-1/2 left-0 disabled:opacity-0 transition-colors bg-black/35 text-white rounded-full flex items-center justify-center text-center p-0.5"
             disabled={prevBtnDisabled}
             onClick={handleScrollPrev}
           >
             <IconArrowLeft className="icon icon-tabler icon-tabler-chevron-left size-12" />
           </Button>
           <Button
-            className="absolute top-1/2 right-1 disabled:opacity-0 bg-indigo/60 text-white rounded-full flex items-center justify-center text-center p-0.5"
+            className="absolute top-1/2 right-0 disabled:opacity-0 bg-black/35 text-white rounded-full flex items-center justify-center text-center p-0.5"
             disabled={nextBtnDisabled}
             onClick={handleScrollNext}
           >
