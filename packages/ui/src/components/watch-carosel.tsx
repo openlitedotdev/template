@@ -7,7 +7,7 @@ import { Watch } from '@/lib/const'
 
 export default function WathcCarousel() {
   return (
-    <section className="max-w-7xl mx-auto mt-10 py-10">
+    <section className="max-w-7xl mx-auto mt-10 py-10 relative">
       <Carousel className="flex md:gap-4 lg:justify-center" buttons>
         {Watch.map((data, index) => (
           <Link
