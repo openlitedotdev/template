@@ -1,11 +1,10 @@
-import { Bell, ChevronDown, Search, UserRound } from 'lucide-react'
+import { Bell, Search, UserRound } from 'lucide-react'
 
 import { useState } from 'react'
 
 function Navbar() {
-  const [seeMenu, setSeeMenu] = useState(false)
   const [_, setInputValue] = useState('')
-  const toggleSeeMenu = () => setSeeMenu(!seeMenu)
+  // const toggleSeeMenu = () => setSeeMenu(!seeMenu)
   const valueInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setInputValue(value)
@@ -50,30 +49,6 @@ function Navbar() {
             <p>Hello</p>
             <p>Admin</p>
           </article>
-          <ChevronDown
-            className="mt-[20px]"
-            cursor="~ pointer"
-            onClick={toggleSeeMenu}
-          />
-          <ul
-            w="100px"
-            bg="blue"
-            text="~ center white"
-            p="10px"
-            rounded="10px"
-            className={`${seeMenu ? 'top-50px absolute  left-24px' : ' top-50px  left-0px opacity-0.5 '} transition-all ease-in-out   duration-300 absolute overflow-hidden`}
-          >
-            <li
-              bg=" hover:#FF947E"
-              transition="all 0.3s ease"
-              p="3px"
-              m="3px"
-              rounded="5px"
-              cursor="~ pointer"
-            >
-              Sign off
-            </li>
-          </ul>
         </article>
       </article>
     </header>
