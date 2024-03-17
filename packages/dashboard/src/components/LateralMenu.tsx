@@ -1,6 +1,6 @@
 import { Flame, X } from 'lucide-react'
 import type { Props } from 'types/lateralmenu'
-import { bottonlateralmenu, bottonlateralothers, bottonlateraluser } from '../lib/const'
+import { bottonLateralMenu, bottonLateralOthers, bottonLateralUser } from '../lib/const'
 import ButtonLateralMenu from './ButtonLateralMenu'
 
 export default function LateralMenu(props: Props) {
@@ -16,7 +16,7 @@ export default function LateralMenu(props: Props) {
           <article className="flex-and-col">
             <p className="text-blue">MENU</p>
             {
-              bottonlateralmenu.map((item, index) => {
+              bottonLateralMenu.map((item, index) => {
                 return (
                   <ButtonLateralMenu key={index} href={item.href}>
                     <item.icon />
@@ -30,7 +30,7 @@ export default function LateralMenu(props: Props) {
           <article className="flex-and-col">
             <p className="text-blue">USER MANAGEMENT</p>
             {
-              bottonlateraluser.map((item, index) => {
+              bottonLateralUser.map((item, index) => {
                 return (
                   <ButtonLateralMenu key={index} href={item.href}>
                     <item.icon />
@@ -44,7 +44,7 @@ export default function LateralMenu(props: Props) {
           <article className="flex-and-col">
             <p className="text-blue">OTHERS</p>
             {
-              bottonlateralothers.map((item, index) => {
+              bottonLateralOthers.map((item, index) => {
                 return (
                   <ButtonLateralMenu key={index} href={item.href}>
                     <item.icon />

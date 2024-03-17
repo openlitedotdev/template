@@ -13,7 +13,7 @@ import {
   Users,
 } from 'lucide-react'
 
-export const bottonlateralmenu = [
+export const bottonLateralMenu = [
   {
     href: '/',
     icon: LayoutGrid,
@@ -51,7 +51,7 @@ export const bottonlateralmenu = [
   },
 ]
 
-export const bottonlateraluser = [
+export const bottonLateralUser = [
   {
     href: '/',
     icon: Users,
@@ -64,7 +64,7 @@ export const bottonlateraluser = [
   },
 ]
 
-export const bottonlateralothers = [
+export const bottonLateralOthers = [
   {
     href: '/',
     icon: Settings,
