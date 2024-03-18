@@ -8,7 +8,7 @@ export default defineConfig({
     'style-border': ' border border-[#E4E7E9] rounded-md shadow-sm box-border pl-10 py-1',
     'text-sad': 'text-[#8B8E99]',
     'text-blue': 'text-[#3858D6]',
-    'flex-and-col': 'flex flex-col',
+    'flex-and-col': 'flex flex-col gap-1',
     'position-icons': 'absolute top-1/2 transform -translate-y-1/2 left-3',
     'stile-form': 'w-full lg:w-50% lg:min-h-screen',
   },
