@@ -1,6 +1,6 @@
-import { Bell, Search } from 'lucide-react'
+import { Bell, ChevronDown, Search } from 'lucide-react'
 import { useState } from 'react'
-import avatarImage from '../../public/png/Avatar.png'
+import avatarImage from '/png/Avatar.png'
 
 function Navbar() {
   const [_, setInputValue] = useState('')
@@ -10,14 +10,13 @@ function Navbar() {
   }
 
   return (
-    <header className="flexbox" lg="w-full gap-0" md="flex justify-center gap-2xl">
+    <header className="flexbox" lg="w-full gap-4" md="flex justify-center gap-2xl">
       <div
-        lg="w-4/5"
-        xl="w-4/5"
+        lg="w-3/5"
+        xl="w-3/5"
       >
         <label
           className="relative flexbox "
-          w="xl:85% lg:85% md:85%"
           p="10px"
           mt="10px"
         >
@@ -35,7 +34,7 @@ function Navbar() {
 
       </div>
 
-      <article className="flexbox gap-6 ">
+      <article className="flexbox gap-12 ">
         <div position="~ relative p-2">
           <div
             position="~ absolute left-15px"
@@ -58,6 +57,7 @@ function Navbar() {
           </article>
 
         </article>
+        <ChevronDown cursor="~ pointer" className="h-25px w-25px text-slate-500 " />
       </article>
     </header>
   )
