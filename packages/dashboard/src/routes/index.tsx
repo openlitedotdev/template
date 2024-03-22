@@ -20,7 +20,7 @@ function Home() {
   return (
     <>
       <div className="flex justify-between ">
-        <LateralMenu style />
+        <LateralMenu />
         <section className="w-full">
           <Navbar />
         </section>

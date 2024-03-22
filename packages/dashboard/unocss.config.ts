@@ -3,7 +3,7 @@ import { defineConfig, presetAttributify, presetUno } from 'unocss'
 export default defineConfig({
   presets: [presetUno(), presetAttributify()],
   shortcuts: {
-    'flexbox': 'flex justify-center items-center',
+    'flexbox': 'flex justify-evenly items-center',
     'flexbox-col': 'flex flex-col justify-center items-center',
     'style-border': ' border border-[#E4E7E9] rounded-md shadow-sm box-border pl-10 py-1',
     'text-sad': 'text-[#8B8E99]',
