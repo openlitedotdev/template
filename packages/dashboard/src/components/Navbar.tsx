@@ -1,4 +1,4 @@
-import { Bell, Menu, Search } from 'lucide-react'
+import { Bell, ChevronDown, Menu, Search } from 'lucide-react'
 import { useState } from 'react'
 import avatarImage from '../../public/png/Avatar.png'
 import { useMenu } from '@/stores/admin'
@@ -22,7 +22,7 @@ function Navbar() {
         xl="w-4/5"
       >
         <label
-          className="relative hidden sm:flex flexbox"
+          className="relative flexbox hidden sm:flex"
           w="90%"
           p="10px"
         >
@@ -40,7 +40,7 @@ function Navbar() {
 
       </div>
 
-      <article className="flexbox gap-6 ">
+      <article className="flexbox gap-12 ">
         <div position="~ relative p-2">
           <div
             position="~ absolute left-15px"
@@ -49,7 +49,6 @@ function Navbar() {
             h="15px"
             bg="#3858D6"
             rounded="5px"
-
           >
             <span color="white" text="~ 3">2</span>
           </div>
@@ -63,6 +62,7 @@ function Navbar() {
           </article>
 
         </article>
+        <ChevronDown cursor="~ pointer" className="h-25px w-25px text-slate-500 " />
       </article>
     </header>
   )
