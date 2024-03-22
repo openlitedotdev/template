@@ -11,3 +11,9 @@ export interface AdminState {
   onLogged: () => void
   onLogout: () => void
 }
+
+export interface MenuState {
+  value: boolean
+  onTrue: () => void
+  onFalse: () => void
+}

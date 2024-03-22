@@ -1,8 +1,11 @@
-import { Bell, Search } from 'lucide-react'
+import { Bell, Menu, Search } from 'lucide-react'
 import { useState } from 'react'
 import avatarImage from '../../public/png/Avatar.png'
+import { useMenu } from '@/stores/admin'
 
 function Navbar() {
+  const onTrue = useMenu(state => state.onTrue)
+
   const [_, setInputValue] = useState('')
   const valueInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
@@ -10,16 +13,18 @@ function Navbar() {
   }
 
   return (
-    <header className="flexbox" lg="w-full gap-0" md="flex justify-center gap-2xl">
+    <header className="flexbox w-full">
+      <button onClick={() => onTrue()}>
+        <Menu size={40} className="sm:hidden" />
+      </button>
       <div
-        lg="w-4/5"
+        md="w-4/5"
         xl="w-4/5"
       >
         <label
-          className="relative flexbox "
-          w="xl:85% lg:85% md:85%"
+          className="relative hidden sm:flex flexbox"
+          w="90%"
           p="10px"
-          mt="10px"
         >
           <input
             type="text"
@@ -52,7 +57,7 @@ function Navbar() {
         </div>
         <article className="relative flexbox gap-10px">
           <img src={avatarImage} />
-          <article flex="~ col ">
+          <article className="flex flex-col">
             <span text="3 balance" font="bold">Feyz Ibrahim</span>
             <span text="2">Admin</span>
           </article>
