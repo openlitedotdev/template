@@ -14,6 +14,7 @@ export default function Home() {
       <section className=" bg-home bg-cover md:bg-container w-full bg-no-repeat  lg:bg-center lg:bg-cover">
         <div className="mx-auto container relative">
           <Header />
+
           <section className="text-white p-4 md:px-24  flex justify-center h-[100dvh] items-center  ">
             <div className="  w-full  md:w-5/5  lg:w-4/5 flex flex-col  gap-6 lg:gap-10">
               <article className="   bg-opacity-50    rounded-lg shadow-2xl p-8 flex flex-col gap-8  transition-all duration-1000 ease-in-out  ">
@@ -27,6 +28,7 @@ export default function Home() {
                   officially stopped selling. SOUTHWEST Why wait? Place your
                   order now!
                 </p>
+
               </article>
 
               {/* <div className='w-full  flex  md:flex-row items-center md:gap-6 justify-around bg-white py-2 px-1 rounded-2xl'>
