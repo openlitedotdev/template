@@ -1,6 +1,5 @@
 import { Bell, ChevronDown, Menu, Search } from 'lucide-react'
 import { useState } from 'react'
-import avatarImage from '../../public/png/Avatar.png'
 import { useMenu } from '@/stores/admin'
 
 function Navbar() {
@@ -55,7 +54,7 @@ function Navbar() {
           <Bell cursor="~ pointer" className="h-25px w-25px text-slate-500 fill-slate-500" />
         </div>
         <article className="relative flexbox gap-10px">
-          <img src={avatarImage} />
+          <img src="/png/Avatar.png" />
           <article className="flex flex-col">
             <span text="3 balance" font="bold">Feyz Ibrahim</span>
             <span text="2">Admin</span>
