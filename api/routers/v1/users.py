@@ -1,10 +1,9 @@
 import re
 from fastapi import APIRouter, HTTPException, status, Depends
 from api.schemas import types
-from api.schemas import models
-from api.deps import create_access_token, get_db
-from api.bcrypt import get_password_hash, verify_password
+from api.deps import get_db
 from sqlalchemy.orm import Session
+from api.services import auth
 
 router = APIRouter()
 
@@ -19,21 +18,15 @@ async def login(user_credentials: types.UserLogin, db: Session = Depends(get_db)
             status: status.HTTP_204_NO_CONTENT,
         }
 
-    db_user = db.query(models.User).filter(models.User.email == user['email']).first()
+    access_token = auth.access(user=user, db=db)
 
-    if db_user and verify_password(user['password'], db_user.password):
-        access_token = create_access_token(data={'sub': user['email']})
-        return {
-            'access_token': access_token,
-            'token_type': 'bearer',
-            'message': 'User logger successfuly 🐶',
-            'db': [],
-            'status': status.HTTP_200_OK,
-        }
-
-    raise HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED, detail='Credentials invalid'
-    )
+    return {
+        'access_token': access_token,
+        'token_type': 'bearer',
+        'message': 'User logger successfuly 🐶',
+        'db': [],
+        'status': status.HTTP_200_OK,
+    }
 
 
 @router.post('/register')
@@ -69,22 +62,6 @@ async def register(user_credentials: types.UserCreate, db: Session = Depends(get
             status_code=status.HTTP_400_BAD_REQUEST,
             detail={
                 'message': 'Password must have at least one character special',
-                'db': [],
-                'status': status.HTTP_400_BAD_REQUEST,
-            },
-        )
-
-    user['password'] = get_password_hash(user.pop('password')).decode()
-
-    user_exists = (
-        db.query(models.User).filter(models.User.email == user['email']).first()
-    )
-
-    if user_exists:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail={
-                'message': 'Email already registered',
                 'db': [],
                 'status': status.HTTP_400_BAD_REQUEST,
             },
@@ -131,17 +108,8 @@ async def register(user_credentials: types.UserCreate, db: Session = Depends(get
                 'status': status.HTTP_400_BAD_REQUEST,
             },
         )
-    db_user = models.User(
-        name=user.get('name'),
-        email=user.get('email').lower(),
-        password=user.get('password'),
-        phone=user.get('phone'),
-        role=user.get('role'),
-    )
 
-    db.add(db_user)
-    db.commit()
-    db.refresh(db_user)
+    auth.create(user=user, db=db)
 
     return {
         'message': 'User create successfuly 🐶',
