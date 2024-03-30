@@ -1,5 +1,6 @@
-import { Bell, ChevronDown, Menu, Search } from 'lucide-react'
+import { Menu, Search } from 'lucide-react'
 import { useState } from 'react'
+import { Avatar, AvatarFallback, AvatarImage, Input } from '@openui-org/react'
 import { useMenu } from '@/stores/admin'
 
 function Navbar() {
@@ -12,57 +13,33 @@ function Navbar() {
   }
 
   return (
-    <header className="flexbox w-full">
-      <button onClick={() => onTrue()}>
-        <Menu size={40} className="sm:hidden" />
+    <header className="flex justify-between px-8 items-center gap-8">
+      <button onClick={() => onTrue()} className="p-6">
+        <Menu size={40} className="sm:hidden text-white" />
       </button>
-      <div
-        md="w-4/5"
-        xl="w-4/5"
-      >
-        <label
-          className="relative flexbox hidden sm:flex"
-          w="90%"
-          p="10px"
-        >
-          <input
-            type="text"
-            outline="blue"
-            p="10px"
-            placeholder="Search..."
-            w="xl:100% lg:100% md:100% "
-            onChange={valueInput}
-            className="rounded-md"
-          />
-          <Search className="absolute right-20px  w-5 text-gray" />
-        </label>
 
-      </div>
+      <label className="flex-1 relative flex justify-evenly items-center sm:flex p-3">
+        <Input
+          type="text"
+          placeholder="Search..."
+          onChange={valueInput}
+          className="rounded-md outline-none p-4 w-full"
+        />
+        <Search className="absolute right-6 size-6 text-dark-900" />
+      </label>
 
-      <article className="flexbox gap-12 ">
-        <div position="~ relative p-2">
-          <div
-            position="~ absolute left-15px"
-            w="15px"
-            className="flexbox p-2 "
-            h="15px"
-            bg="#3858D6"
-            rounded="5px"
-          >
-            <span color="white" text="~ 3">2</span>
-          </div>
-          <Bell cursor="~ pointer" className="h-25px w-25px text-slate-500 fill-slate-500" />
-        </div>
-        <article className="relative flexbox gap-10px">
-          <img src="/png/Avatar.png" />
-          <article className="flex flex-col">
-            <span text="3 balance" font="bold">Feyz Ibrahim</span>
-            <span text="2">Admin</span>
-          </article>
+      <article className="relative flex justify-center items-center gap-3">
+        <Avatar>
+          <AvatarImage src="/png/Avatar.png" />
+          <AvatarFallback>
+            CS
+          </AvatarFallback>
+        </Avatar>
 
-        </article>
-        <ChevronDown cursor="~ pointer" className="h-25px w-25px text-slate-500 " />
+        <h3 className="text-xl font-medium text-white">Feyz Ibrahim</h3>
+
       </article>
+
     </header>
   )
 }

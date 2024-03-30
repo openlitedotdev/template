@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import 'virtual:uno.css'
-import '@unocss/reset/tailwind.css'
 import { routeTree } from './routeTree.gen'
 import { DevtoolsQuery } from './components/DevTools'
+
+import './index.css'
 
 declare module '@tanstack/react-router' {
   interface Register {
