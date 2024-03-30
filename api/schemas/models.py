@@ -21,6 +21,7 @@ class Category(Base):
     name = Column(String)
     image = Column(String)
     description = Column(String)
+    image_publi_id = Column(String)
     products = relationship('Product', back_populates='category')
 
 

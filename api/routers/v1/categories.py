@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status, HTTPException, UploadFile, File, Form
 from sqlalchemy.orm import Session
-from api.schemas import models, types
+from api.schemas import models
 from api.deps import get_db, get_current_user, on_validate_admin
 import cloudinary
 import cloudinary.uploader
@@ -55,8 +55,8 @@ async def create_category(
             unique_filename=True,
             overwrite=False,
         )
-        print(upload_result)
         image_url = upload_result['secure_url']
+        image_id = upload_result["public_id"]
 
     except cloudinary.exceptions.Error as e:
         raise HTTPException(
@@ -64,7 +64,7 @@ async def create_category(
             detail=f'Error uploading the image: {str(e)}',
         )
 
-    db_user = models.Category(name=name, image=image_url, description=description)
+    db_user = models.Category(name=name, image=image_url, description=description, image_publi_id=image_id)
 
     db.add(db_user)
     db.commit()
@@ -75,9 +75,9 @@ async def create_category(
         'status': status.HTTP_200_OK,
     }
 
-@router.post("/delete")
+@router.get(f"/delete/{id}")
 async def delete_category(
-    id: types.CategoryOptions,
+    id: id,
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
@@ -89,11 +89,11 @@ async def delete_category(
 
     on_validate_admin(user.role)
 
-    category = db.query(models.Category).filter(models.Category.id == id.id).first()
+    category = db.query(models.Category).filter(models.Category.id == id).first()
 
     uploader.destroy(category.image_publi_id)
 
-    db.query(models.Category).filter(models.Category.id == id.id).delete()
+    db.query(models.Category).filter(models.Category.id == id).delete()
 
     db.commit()
 
