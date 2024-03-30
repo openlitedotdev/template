@@ -2,6 +2,8 @@ from fastapi import APIRouter, Depends, status, HTTPException, UploadFile, File,
 from sqlalchemy.orm import Session
 from api.schemas import models
 from api.deps import get_db, get_current_user, on_validate_admin
+from api.services import categories
+from api.helpers import http
 import cloudinary
 import cloudinary.uploader
 from cloudinary import uploader
@@ -14,21 +16,9 @@ router = APIRouter()
 async def get_category(
     db: Session = Depends(get_db), current_user: dict = Depends(get_current_user)
 ):
-    user = (
-        db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
-        .first()
-    )
+    all_categories = categories.get(current_user=current_user, db=db)
 
-    on_validate_admin(user.role)
-
-    categories = db.query(models.Category).all()
-
-    return {
-        'message': 'Get categoty in commerces',
-        'db': categories,
-        'status': status.HTTP_200_OK,
-    }
+    return http.response(message='Get categoty in commerces', db=all_categories)
 
 
 @router.post('/create')
