@@ -40,7 +40,7 @@ function Home() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <Card className="bg-dark-900/90">
+            <Card className="bg-dark-900/90 border-dark-700/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-medium">
                   Total Revenue
@@ -49,12 +49,12 @@ function Home() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">$45,231.89</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-dark-300">
                   +20.1% from last month
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-dark-900/90">
+            <Card className="bg-dark-900/90 border-dark-700/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-medium">
                   Subscriptions
@@ -63,24 +63,24 @@ function Home() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+2350</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-dark-300">
                   +180.1% from last month
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-dark-900/90">
+            <Card className="bg-dark-900/90 border-dark-700/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-medium">Sales</CardTitle>
                 <CreditCard className="size-6" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+12,234</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-dark-300">
                   +19% from last month
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-dark-900/90">
+            <Card className="bg-dark-900/90 border-dark-700/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-base font-medium">
                   Active Now
@@ -89,14 +89,14 @@ function Home() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">+573</div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-dark-300">
                   +201 since last hour
                 </p>
               </CardContent>
             </Card>
           </div>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-7">
-            <Card className="col-span-4 bg-dark-900/90">
+            <Card className="col-span-4 bg-dark-900/90 border-dark-700/50">
               <CardHeader>
                 <CardTitle>Overview</CardTitle>
               </CardHeader>
@@ -104,10 +104,10 @@ function Home() {
                 Hola
               </CardContent>
             </Card>
-            <Card className="col-span-4 md:col-span-3 bg-dark-900/90">
+            <Card className="col-span-4 md:col-span-3 bg-dark-900/90 border-dark-700/50">
               <CardHeader>
                 <CardTitle>Recent Sales</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-dark-300">
                   You made 265 sales this month.
                 </CardDescription>
               </CardHeader>
