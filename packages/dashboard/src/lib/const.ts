@@ -55,7 +55,7 @@ export const bottonLateralUser = [
   {
     href: '/',
     icon: Users,
-    text: 'Manage Admins',
+    text: 'Admins',
   },
   {
     href: '/',

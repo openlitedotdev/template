@@ -5,7 +5,7 @@ type Props = LinkHTMLAttributes<HTMLElement>
 
 export default function ButtonLateralMenu(props: Props) {
   return (
-    <Link to={props.href} className="px-3 py-2 flex gap-2 hover:bg-[#8B8E99]/35 rounded-md focus:bg-[#8B8E99]/35 focus:text-blue hover:text-blue">
+    <Link to={props.href} className="px-3 py-2.5 flex gap-2 rounded-md hover:bg-dark-800/90 text-dark-300 focus:bg-dark-900/90 hover:text-white font-medium">
       {props.children}
     </Link>
   )

@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  scroll-behavior: smooth;
-  font-family: 'onest-regular', sans-serif;
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+  html,
+  body {
+    scroll-behavior: smooth;
+    font-family: 'Archivo', sans-serif;
+  }
 }
 
 @keyframes flameAnimation {
@@ -87,18 +91,4 @@ body {
     -webkit-transform: rotate(90deg);
     transform: rotate(290deg);
   }
-}
-
-@font-face {
-  font-family: 'onest-bold';
-  src: url('/fonts/Onest-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'onest-regular';
-  src: url('/fonts/Onest-Regular.ttf');
-}
-@font-face {
-  font-family: 'onest-medium';
-  src: url('/fonts/Onest-Medium.ttf');
 }

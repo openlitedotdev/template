@@ -11,6 +11,7 @@
     "test": "vitest --run"
   },
   "dependencies": {
+    "@openui-org/react": "0.10.3",
     "embla-carousel-autoplay": "8.0.0",
     "embla-carousel-react": "8.0.0",
     "next": "14.1.0",
