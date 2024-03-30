@@ -11,6 +11,8 @@ const ReactQueryDevtoolsProduction = React.lazy(() =>
 export function DevtoolsQuery() {
   const [showDevtools, setShowDevtools] = React.useState(false)
   React.useEffect(() => {
+    // eslint-disable-next-line ts/ban-ts-comment
+    // @ts-expect-error
     window.toggleDevtools = () => setShowDevtools(old => !old)
   }, [])
 

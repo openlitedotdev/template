@@ -1,6 +1,5 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useEffect } from 'react'
-import Navbar from '@/components/Navbar'
 import { useAdmin } from '@/stores/admin'
 import LateralMenu from '@/components/LateralMenu'
 
@@ -21,9 +20,7 @@ function Home() {
     <>
       <div className="flex justify-between ">
         <LateralMenu />
-        <section className="w-full">
-          <Navbar />
-        </section>
+
       </div>
     </>
   )

@@ -5,8 +5,6 @@ import { TanStackRouterDevtools } from '../components/ReactLazy'
 export const Route = createRootRoute({
   component: () => (
     <>
-
-      <hr />
       <ScrollRestoration />
       <Outlet />
       <Suspense>

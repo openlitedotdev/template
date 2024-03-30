@@ -4,67 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-
-      html,
-      body {
-        font-family: 'Onest', sans-serif;
-        background-color: #e4e7e9;
-      }
-
-      .menulateral::-webkit-scrollbar {
-        width: 12px;
-      }
-
-      .menulateral::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      .menulateral::-webkit-scrollbar-thumb {
-        background-color: transparent;
-        border-radius: 20px;
-        border: 0px solid transparent;
-      }
-
-      .menulateralanimate {
-        -webkit-animation: slide-in-left 0.5s
-          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-      }
-
-      @-webkit-keyframes slide-in-left {
-        0% {
-          -webkit-transform: translateX(-1000px);
-          transform: translateX(-1000px);
-          opacity: 0;
-        }
-
-        100% {
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-
-      @keyframes slide-in-left {
-        0% {
-          -webkit-transform: translateX(-1000px);
-          transform: translateX(-1000px);
-          opacity: 0;
-        }
-
-        100% {
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-    </style>
     <title>Dashboard Commerce</title>
   </head>
 
-  <body>
+  <body class="bg-dark-900">
     <div id="app"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
