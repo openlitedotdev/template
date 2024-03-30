@@ -8,8 +8,8 @@ export default function LateralMenu() {
   const onFalse = useMenu(state => state.onFalse)
   const valueMenu = useMenu(state => state.value)
   return (
-    <nav className={`menu-lateral h-screen sm:w-xs ${valueMenu ? 'fixed menu-lateral-animate' : 'hidden sm:block'} inset-0 z-50 overflow-auto w-80  border-r border-dark-700/50`}>
-      <div className="p-4 md:px-7 flex flex-col gap-8 lg:gap-0 justify-evenly text-dark-500 relative">
+    <nav className={`menu-lateral h-screen sm:w-xs ${valueMenu ? 'fixed menu-lateral-animate' : 'hidden sm:block'} inset-0 z-50 overflow-auto w-64  border-r border-dark-700/50`}>
+      <div className="p-4 flex flex-col gap-8 lg:gap-0 justify-evenly text-dark-500 relative">
         <button onClick={() => onFalse()}>
           <X size={40} className="text-white absolute right-2 top-2 block sm:hidden" />
         </button>
