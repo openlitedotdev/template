@@ -1,83 +1,58 @@
-import {
-  ArrowUpLeftFromSquare,
-  BadgeDollarSign,
-  Info,
-  Layers,
-  LayoutGrid,
-  LogOut,
-  Package,
-  Settings,
-  StretchHorizontal,
-  Ticket,
-  User,
-  Users,
-} from 'lucide-react'
+import type { NavItem } from 'types/index'
 
-export const bottonLateralMenu = [
+export const navItems: NavItem[] = [
   {
+    title: 'Dashboard',
     href: '/',
-    icon: LayoutGrid,
-    text: 'Dashboard',
+    icon: 'dashboard',
+    label: 'Dashboard',
   },
   {
-    href: '/',
-    icon: Package,
-    text: 'Products',
+    title: 'Products',
+    href: '/products',
+    icon: 'laptop',
+    label: 'products',
   },
   {
-    href: '/',
-    icon: Layers,
-    text: 'Category',
+    title: 'Categories',
+    href: '/categories',
+    icon: 'media',
+    label: 'categories',
   },
   {
-    href: '/',
-    icon: StretchHorizontal,
-    text: 'Orders',
+    title: 'Orders',
+    href: '/orders',
+    icon: 'help',
+    label: 'employee',
   },
   {
-    href: '/',
-    icon: Ticket,
-    text: 'Coupon',
+    title: 'Coupons',
+    href: '/coupons',
+    icon: 'kanban',
+    label: 'coupons',
   },
   {
-    href: '/',
-    icon: ArrowUpLeftFromSquare,
-    text: 'Banner',
+    title: 'Banners',
+    href: '/banners',
+    icon: 'ellipsis',
+    label: 'coupons',
   },
   {
-    href: '/',
-    icon: BadgeDollarSign,
-    text: 'Transaction',
-  },
-]
-
-export const bottonLateralUser = [
-  {
-    href: '/',
-    icon: Users,
-    text: 'Admins',
+    title: 'Customers',
+    href: '/customers',
+    icon: 'employee',
+    label: 'customers',
   },
   {
-    href: '/',
-    icon: User,
-    text: 'Customers',
-  },
-]
-
-export const bottonLateralOthers = [
-  {
-    href: '/',
-    icon: Settings,
-    text: 'settings',
+    title: 'Settings',
+    href: '/settings',
+    icon: 'settings',
+    label: 'settings',
   },
   {
-    href: '/',
-    icon: Info,
-    text: 'Help',
-  },
-  {
-    href: '/',
-    icon: LogOut,
-    text: 'Logout',
+    title: 'Help',
+    href: '/help',
+    icon: 'help',
+    label: 'help',
   },
 ]
