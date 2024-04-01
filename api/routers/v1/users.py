@@ -23,9 +23,7 @@ async def login(user_credentials: types.UserLogin, db: Session = Depends(get_db)
 
     results.append({'access_token': token, 'token_type': 'Bearer'})
 
-    return http.response(
-        message='User logger successfuly', db=results, status=status.HTTP_200_OK
-    )
+    return http.response(message='User logger successfuly', db=results)
 
 
 @router.post('/register')
@@ -103,4 +101,4 @@ async def register(user_credentials: types.UserCreate, db: Session = Depends(get
 
     auth.create(user=user, db=db)
 
-    return http.response(message='The number is not valid')
+    return http.response(message='User register successfuly')

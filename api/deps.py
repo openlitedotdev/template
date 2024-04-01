@@ -5,6 +5,9 @@ from datetime import datetime, timedelta, timezone
 from fastapi.security import OAuth2PasswordBearer
 from api.db.conn import SessionLocal
 from dotenv import load_dotenv
+import cloudinary
+import cloudinary.uploader
+import uuid
 
 load_dotenv()
 
@@ -62,3 +65,24 @@ def on_validate_admin(role: str):
                 'status': status.HTTP_400_BAD_REQUEST,
             },
         )
+    
+def save_image_cloudinary(image):
+    public_id = str(uuid.uuid4())
+
+    try:
+        file_content = image.file.read()
+        upload_result = cloudinary.uploader.upload(
+            file_content,
+            public_id=public_id,
+            unique_filename=True,
+            overwrite=False,
+        )
+        image_url = upload_result['secure_url']
+        image_id = upload_result["public_id"]
+    except cloudinary.exceptions.Error as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f'Error uploading the image: {str(e)}',
+        )
+    
+    return image_url, image_id
