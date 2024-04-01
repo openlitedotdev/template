@@ -1,6 +1,6 @@
 import { Menu, Search } from 'lucide-react'
 import { useState } from 'react'
-import { Avatar, AvatarFallback, AvatarImage, Input } from '@openui-org/react'
+import { Input } from '@openui-org/react'
 import { useMenu } from '@/stores/admin'
 
 function Navbar() {
@@ -27,19 +27,6 @@ function Navbar() {
         />
         <Search className="absolute right-6 size-6 text-dark-900" />
       </label>
-
-      <article className="relative flex justify-center items-center gap-3">
-        <Avatar>
-          <AvatarImage src="/png/Avatar.png" />
-          <AvatarFallback>
-            CS
-          </AvatarFallback>
-        </Avatar>
-
-        <h3 className="text-xl font-medium text-white">Feyz Ibrahim</h3>
-
-      </article>
-
     </header>
   )
 }
