@@ -44,17 +44,3 @@ def create(user, db: Session):
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
-
-def get_categories(db: Session, current_user: dict):
-    user = (
-        db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
-        .first()
-    )
-
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED, detail='User not found'
-        )
-
-    return user
