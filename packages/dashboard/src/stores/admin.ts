@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import type { AdminState, MenuState } from 'types/admin'
+import type { AdminState, MenuState } from 'types'
 
 export const useAdmin = create<AdminState>(() => ({
   credentials: { name: '' },
