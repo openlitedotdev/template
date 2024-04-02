@@ -1,19 +1,16 @@
-from fastapi import APIRouter, Depends, status, HTTPException, UploadFile, File, Form
+from fastapi import APIRouter, Depends, UploadFile, File, Form
 from sqlalchemy.orm import Session
-from api.schemas import models
-from api.deps import get_db, get_current_user, on_validate_admin
+from api.schemas import types
+from api.deps import get_db, get_current_user
 from api.services import categories
 from api.helpers import http
-import cloudinary
-import cloudinary.uploader
-import uuid
 
 router = APIRouter()
 
 
 @router.get('/get')
 async def get_category(
-    db: Session = Depends(get_db), current_user: dict = Depends(get_current_user)
+    db: Session = Depends(get_db), current_user: types.User = Depends(get_current_user)
 ):
     all_categories = categories.get(current_user=current_user, db=db)
 
@@ -26,40 +23,19 @@ async def create_category(
     image: UploadFile = File(),
     description: str = Form(),
     db: Session = Depends(get_db),
-    current_user: dict = Depends(get_current_user),
+    current_user: types.User = Depends(get_current_user),
 ):
-    user = (
-        db.query(models.User).filter(models.User.email == current_user['sub']).first()
-    )
+    
+    all_categories = categories.create(name=name, image=image, description=description,current_user=current_user,db=db)
 
-    on_validate_admin(user.role)
+    return http.response(message='new category was created', db=all_categories)
 
-    public_id = str(uuid.uuid4())
+@router.get("/delete/{id}")
+async def delete_category(
+    id: int,
+    db: Session = Depends(get_db),
+    current_user: types.User = Depends(get_current_user),
+):
+    category = categories.delete(id=id, current_user=current_user, db=db)
 
-    try:
-        file_content = image.file.read()
-        upload_result = cloudinary.uploader.upload(
-            file_content,
-            public_id=public_id,
-            unique_filename=True,
-            overwrite=False,
-        )
-        print(upload_result)
-        image_url = upload_result['secure_url']
-
-    except cloudinary.exceptions.Error as e:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f'Error uploading the image: {str(e)}',
-        )
-
-    db_user = models.Category(name=name, image=image_url, description=description)
-
-    db.add(db_user)
-    db.commit()
-    db.refresh(db_user)
-
-    return {
-        'message': 'new category was created',
-        'status': status.HTTP_200_OK,
-    }
+    return http.response(message='Delete categoty', db=category)

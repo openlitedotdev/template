@@ -25,6 +25,8 @@ class User(BaseModel):
 class CategoryCreate(BaseModel):
     name: str
     image: str
+    description: str
+    image_publi_id: str
 
 
 class ProductCreate(BaseModel):
