@@ -4,29 +4,20 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from api.schemas import models, types
 from api.deps import get_db, get_current_user, on_validate_admin
+from api.services import products
+from api.helpers import http
 
 router = APIRouter()
 
 
 @router.get('/get')
 async def get_products(
-    db: Session = Depends(get_db), current_user: dict = Depends(get_current_user)
+    db: Session = Depends(get_db)
 ):
-    user = (
-        db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
-        .first()
-    )
 
-    on_validate_admin(user.role)
+    all_products = products.get(db)
 
-    products = db.query(models.Product).all()
-
-    return {
-        'message': 'Get products in commerces',
-        'db': products,
-        'status': status.HTTP_200_OK,
-    }
+    return http.response(message="Get products in commerces", db=all_products)
 
 
 @router.post('/create')
