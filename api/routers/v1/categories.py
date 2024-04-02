@@ -53,7 +53,7 @@ async def edit_category(
 
     return http.response(message='category was edited successfully', db=category)
 
-@router.get("/delete/{id}")
+@router.delete("/delete/{id}")
 async def delete_category(
     id: int,
     db: Session = Depends(get_db),
