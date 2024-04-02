@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { UserNav } from './user-nav'
+import { MobileSidebar } from './mobile-sidebar'
 
 export default function Header() {
   return (
@@ -16,6 +17,9 @@ export default function Header() {
               <path d="M9 18c-4.51 2-5-2-7-2" />
             </svg>
           </Link>
+        </div>
+        <div className="block lg:!hidden">
+          <MobileSidebar />
         </div>
         <div className="flex items-center gap-2">
           <UserNav />
