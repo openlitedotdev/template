@@ -3,7 +3,6 @@ from api.schemas import models
 from api.deps import on_validate_admin
 from api.deps import save_image_cloudinary
 from cloudinary import uploader
-# from api.helpers import http
 
 def get(db = Session):
 
@@ -32,7 +31,7 @@ def create(name,image,description,current_user, db = Session):
     db.commit()
     db.refresh(db_user)
 
-def edit_id(id, current_user, db = Session):
+def get_by_id(id, current_user, db = Session):
     user = (
         db.query(models.User)
         .filter(models.User.email == current_user.get('sub'))
