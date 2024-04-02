@@ -9,9 +9,7 @@ router = APIRouter()
 
 
 @router.get('/get')
-async def get_category(
-    db: Session = Depends(get_db)
-):
+async def get_category(db: Session = Depends(get_db)):
     all_categories = categories.get(db=db)
 
     return http.response(message='Get categoty in commerces', db=all_categories)
@@ -25,22 +23,29 @@ async def create_category(
     db: Session = Depends(get_db),
     current_user: types.User = Depends(get_current_user),
 ):
-    
-    all_categories = categories.create(name=name, image=image, description=description,current_user=current_user,db=db)
+    all_categories = categories.create(
+        name=name,
+        image=image,
+        description=description,
+        current_user=current_user,
+        db=db,
+    )
 
     return http.response(message='new category was created', db=all_categories)
 
-@router.get("/get-by-id/{id}")
+
+@router.get('/get-by-id/{id}')
 async def get_category_id(
     id: int,
     db: Session = Depends(get_db),
     current_user: types.User = Depends(get_current_user),
 ):
-    category = categories.edit_id(id=id,current_user=current_user, db=db)
+    category = categories.get_by_id(id=id, current_user=current_user, db=db)
 
     return http.response(message='category to be edited', db=category)
 
-@router.patch("/edit/{id}")
+
+@router.patch('/edit/{id}')
 async def edit_category(
     id: int,
     name: str = Form(),
@@ -49,11 +54,19 @@ async def edit_category(
     db: Session = Depends(get_db),
     current_user: types.User = Depends(get_current_user),
 ):
-    category = categories.edit(id=id,name=name,image=image,description=description,current_user=current_user, db=db)
+    category = categories.edit(
+        id=id,
+        name=name,
+        image=image,
+        description=description,
+        current_user=current_user,
+        db=db,
+    )
 
     return http.response(message='category was edited successfully', db=category)
 
-@router.get("/delete/{id}")
+
+@router.get('/delete/{id}')
 async def delete_category(
     id: int,
     db: Session = Depends(get_db),
