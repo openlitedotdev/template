@@ -11,6 +11,13 @@ export interface NavItem {
   description?: string
 }
 
+export interface SalesItem {
+  title: string
+  icon?: keyof typeof Icons
+  price: string
+  lastMoth: string
+}
+
 interface DashboardNavProps {
   items: NavItem[]
   setOpen?: Dispatch<SetStateAction<boolean>>
