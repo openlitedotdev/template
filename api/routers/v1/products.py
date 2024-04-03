@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from api.deps import get_db, get_current_user
 from api.services import products
 from api.helpers import http
+from api.schemas import types
 
 router = APIRouter()
 
@@ -49,3 +50,14 @@ async def create_product(
     )
 
     return http.response(message="New product was created", db=product)
+
+@router.delete('/delete/{id}')
+async def delete_product(
+    id: int,
+    db: Session = Depends(get_db),
+    currrent_user: types.User = Depends(get_current_user)
+):
+    
+    products_delete = products.delete(id=id,currrent_user=currrent_user, db=db)
+
+    return http.response(message="Product was deleted", db=products_delete)
