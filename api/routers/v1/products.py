@@ -1,9 +1,6 @@
-import cloudinary
-import cloudinary.uploader
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, Form, File, UploadFile
 from sqlalchemy.orm import Session
-from api.schemas import models, types
-from api.deps import get_db, get_current_user, on_validate_admin
+from api.deps import get_db, get_current_user
 from api.services import products
 from api.helpers import http
 
@@ -22,48 +19,33 @@ async def get_products(
 
 @router.post('/create')
 async def create_product(
-    product: types.ProductCreate,
+    name: str = Form(),
+    price: int = Form(),
+    image: UploadFile = File(),
+    if_offer: bool = Form(),
+    offer_price: int = Form(),
+    punctuation: int = Form(),
+    quantity: int = Form(),
+    description: str = Form(),
+    brand: str = Form(),
+    category_id: int = Form(),
     db: Session = Depends(get_db),
     current_user: dict = Depends(get_current_user),
 ):
-    hash_product = product.model_dump()
 
-    user = (
-        db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
-        .first()
+    product = products.create(
+        name=name,
+        price=price,
+        image=image,
+        if_offer=if_offer,
+        offer_price=offer_price,
+        punctuation=punctuation,
+        quantity=quantity,
+        description=description,
+        brand=brand,
+        category_id=category_id,
+        db=db,
+        current_user=current_user,
     )
 
-    on_validate_admin(user.role)
-
-    cloudinary.uploader.upload(
-        'https://cloudinary-devs.github.io/cld-docs-assets/assets/images/butterfly.jpeg',
-        public_id='quickstart_butterfly',
-        unique_filename=False,
-        overwrite=True,
-    )
-
-    srcURL = cloudinary.CloudinaryImage('quickstart_butterfly').build_url()
-
-    created_product = models.Product(
-        name=hash_product.get('name'),
-        price=hash_product.get('price'),
-        image=srcURL,
-        is_offer=hash_product.get('is_offer'),
-        offer_price=hash_product.get('offer_price'),
-        punctuation=hash_product.get('punctuation'),
-        quantity=hash_product.get('quantity'),
-        description=hash_product.get('description'),
-        brand=hash_product.get('brand'),
-        category_id=hash_product.get('category_id'),
-    )
-
-    db.add(created_product)
-    db.commit()
-
-    db.refresh(created_product)
-
-    return {
-        'message': 'New product was created',
-        'status': status.HTTP_200_OK,
-    }
+    return http.response(message="New product was created", db=product)

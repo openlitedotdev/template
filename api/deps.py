@@ -60,7 +60,7 @@ def on_validate_admin(role: str):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail={
-                'message': 'You do not have permission, you must be admin',
+                'message': '',
                 'db': [],
                 'status': status.HTTP_400_BAD_REQUEST,
             },
