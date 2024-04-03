@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 import cloudinary
 import cloudinary.uploader
 import uuid
+from api.helpers import http
 
 load_dotenv()
 
@@ -35,7 +36,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
 def get_current_user(token: str = Depends(oauth2_scheme)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
-        detail='Invalid credentials',
+        detail=http.response(message='Invalid credentials', status=401),
         headers={'WWW-Authenticate': 'Bearer'},
     )
     try:
@@ -59,11 +60,7 @@ def on_validate_admin(role: str):
     if not role == 'admin':
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail={
-                'message': '',
-                'db': [],
-                'status': status.HTTP_400_BAD_REQUEST,
-            },
+            detail= http.response(menssage='You do not have permission to perform this action', status=400),
         )
     
 def save_image_cloudinary(image):
@@ -82,7 +79,7 @@ def save_image_cloudinary(image):
     except cloudinary.exceptions.Error as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f'Error uploading the image: {str(e)}',
+            detail= http.response(menssage=f'Error uploading the image: {str(e)}', status=500),
         )
     
     return image_url, image_id
