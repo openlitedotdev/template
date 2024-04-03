@@ -9,7 +9,7 @@ export default function Sales() {
         const Icon = Icons[item.icon || 'arrowRight']
 
         return (
-          <Card key={index} className="bg-dark-900/90 border-dark-700/50">
+          <Card key={index}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-base font-medium">
                 Active Now
@@ -17,7 +17,7 @@ export default function Sales() {
               <Icon className="size-6" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">+573</div>
+              <h2 className="text-2xl">+573</h2>
               <p className="text-xs text-dark-300">
                 +201 since last hour
               </p>

@@ -11,7 +11,7 @@ export default function Dashboard() {
             Hi, Welcome back 👋
           </h2>
           <div className="hidden md:flex items-center space-x-2">
-            <Button variant="ligth">Download</Button>
+            <Button>Download</Button>
           </div>
         </div>
 
@@ -19,7 +19,7 @@ export default function Dashboard() {
           <Sales />
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-7">
-          <Card className="col-span-4 bg-dark-900/90 border-dark-700/50">
+          <Card className="col-span-4">
             <CardHeader>
               <CardTitle>Overview</CardTitle>
             </CardHeader>
@@ -27,7 +27,7 @@ export default function Dashboard() {
               <Overview />
             </CardContent>
           </Card>
-          <Card className="col-span-4 md:col-span-3 bg-dark-900/90 border-dark-700/50">
+          <Card className="col-span-4 md:col-span-3">
             <CardHeader>
               <CardTitle>Recent Sales</CardTitle>
               <CardDescription className="text-dark-300">
