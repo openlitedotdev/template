@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { UserNav } from './user-nav'
 import { MobileSidebar } from './mobile-sidebar'
+import { ModeToggle } from './mode-toggle'
 
 export default function Header() {
   return (
@@ -23,6 +24,7 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-2">
           <UserNav />
+          <ModeToggle />
         </div>
       </nav>
     </div>

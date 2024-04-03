@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { routeTree } from './routeTree.gen'
 import { DevtoolsQuery } from './components/dev-tools'
+import { ThemeProvider } from '@/components/theme-provider'
 
 import './index.css'
 
@@ -22,11 +23,13 @@ if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <React.StrictMode>
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-        <ReactQueryDevtools initialIsOpen />
-        <DevtoolsQuery />
-      </QueryClientProvider>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router} />
+          <ReactQueryDevtools initialIsOpen />
+          <DevtoolsQuery />
+        </QueryClientProvider>
+      </ThemeProvider>
     </React.StrictMode>,
   )
 }
