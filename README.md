@@ -1,6 +1,6 @@
 # Commerce
 
-<img src="./OpenLand.jpeg" align="right" alt="Open Land" width="100" />
+<img src="./assets/OpenLand.jpeg" align="right" alt="Open Land" width="100" />
 
 This is the source code for https://ui-commerce.up.railway.app/ by Open Land.
 
