@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from api.schemas import models
 from api.deps import on_validate_admin, save_image_cloudinary
+from cloudinary import uploader
 
 def get(db: Session):
 
@@ -36,3 +37,16 @@ def create(name, price, image, if_offer, offer_price, punctuation, quantity, des
     db.add(created_product)
     db.commit()
     db.refresh(created_product)
+
+def delete(id, currrent_user, db = Session):
+
+    user = (db.query(models.User).filter(models.User.email == currrent_user.get('sub')).first())
+
+    on_validate_admin(user.role)
+
+    product = db.query(models.Product).filter(models.Product.id == id).first()
+
+    uploader.destroy(product.image_public_id)
+
+    db.query(models.Product).filter(models.Product.id == id).delete()
+    db.commit()
