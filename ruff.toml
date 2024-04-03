@@ -1,7 +1,0 @@
-exclude = [
-  ".venv",
-  "packages"
-]
-
-[format]
-quote-style = "single"
