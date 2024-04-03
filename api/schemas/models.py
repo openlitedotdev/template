@@ -32,6 +32,7 @@ class Product(Base):
     name = Column(String)
     price = Column(Integer)
     image = Column(String)
+    image_public_id = Column(String)
     is_offer = Column(Boolean)
     offer_price = Column(Integer)
     punctuation = Column(Integer)
