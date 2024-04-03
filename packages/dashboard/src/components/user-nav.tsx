@@ -7,7 +7,7 @@ import {
 
 export function UserNav() {
   return (
-    <Avatar className="h-8 w-8">
+    <Avatar className="size-9 cursor-pointer">
       <AvatarImage src="/no-profile.jpeg" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>

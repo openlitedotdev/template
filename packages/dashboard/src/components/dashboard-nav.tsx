@@ -20,7 +20,7 @@ export function DashboardNav({ items, setOpen }: DashboardNavProps) {
               }}
             >
               <span className={`
-                flex items-center rounded-md px-3 py-2 text-sm font-medium hover:bg-dark-700/50 hover:text-dark-800' ${router.state.location.pathname === item.href ? 'bg-dark-700/50' : 'bg-transparent'} ${item.disabled && 'cursor-not-allowed opacity-80'}`}
+                flex items-center rounded-md px-3 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/90' ${router.state.location.pathname === item.href ? 'bg-secondary/90' : 'bg-transparent'} ${item.disabled && 'cursor-not-allowed opacity-80'}`}
               >
                 <Icon className="mr-2 size-6" />
                 <span>{item.title}</span>
