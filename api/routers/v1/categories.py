@@ -8,16 +8,14 @@ from api.helpers import http
 router = APIRouter()
 
 
-@router.get("/get")
-async def get_category(
-    db: Session = Depends(get_db)
-):
+@router.get('/get')
+async def get_category(db: Session = Depends(get_db)):
     all_categories = categories.get(db=db)
 
     return http.response(message='Get categoty in commerces', db=all_categories)
 
 
-@router.post("/create")
+@router.post('/create')
 async def create_category(
     name: str = Form(),
     image: UploadFile = File(),
@@ -36,7 +34,7 @@ async def create_category(
     return http.response(message='new category was created', db=all_categories)
 
 
-@router.get("/get-by-id/{id}")
+@router.get('/get-by-id/{id}')
 async def get_category_id(
     id: int,
     db: Session = Depends(get_db),
@@ -47,7 +45,7 @@ async def get_category_id(
     return http.response(message='category to be edited', db=category)
 
 
-@router.patch("/edit/{id}")
+@router.patch('/edit/{id}')
 async def edit_category(
     id: int,
     name: str = Form(),
@@ -67,7 +65,8 @@ async def edit_category(
 
     return http.response(message='category was edited successfully', db=category)
 
-@router.delete("/delete/{id}")
+
+@router.delete('/delete/{id}')
 async def delete_category(
     id: int,
     db: Session = Depends(get_db),

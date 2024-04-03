@@ -60,9 +60,12 @@ def on_validate_admin(role: str):
     if not role == 'admin':
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail= http.response(menssage='You do not have permission to perform this action', status=400),
+            detail=http.response(
+                menssage='You do not have permission to perform this action', status=400
+            ),
         )
-    
+
+
 def save_image_cloudinary(image):
     public_id = str(uuid.uuid4())
 
@@ -75,11 +78,13 @@ def save_image_cloudinary(image):
             overwrite=False,
         )
         image_url = upload_result['secure_url']
-        image_id = upload_result["public_id"]
+        image_id = upload_result['public_id']
     except cloudinary.exceptions.Error as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail= http.response(menssage=f'Error uploading the image: {str(e)}', status=500),
+            detail=http.response(
+                menssage=f'Error uploading the image: {str(e)}', status=500
+            ),
         )
-    
+
     return image_url, image_id
