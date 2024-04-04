@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react'
-import type { Icons } from '../src/components/icons'
+import type { Icons } from '../src/components/utils/icons'
 
 export interface NavItem {
   title: string
