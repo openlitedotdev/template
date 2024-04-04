@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@openui-org/react'
-import { Icons } from './icons'
+import { Icons } from './utils/icons'
 import { salesItems } from '@/lib/const'
 
 export default function Sales() {

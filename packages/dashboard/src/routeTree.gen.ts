@@ -11,16 +11,12 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as ProductsImport } from './routes/products'
 import { Route as LoginImport } from './routes/login'
 import { Route as IndexImport } from './routes/index'
+import { Route as ProductsIndexImport } from './routes/products/index'
+import { Route as ProductsNewImport } from './routes/products/new'
 
 // Create/Update Routes
-
-const ProductsRoute = ProductsImport.update({
-  path: '/products',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const LoginRoute = LoginImport.update({
   path: '/login',
@@ -29,6 +25,16 @@ const LoginRoute = LoginImport.update({
 
 const IndexRoute = IndexImport.update({
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ProductsIndexRoute = ProductsIndexImport.update({
+  path: '/products/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ProductsNewRoute = ProductsNewImport.update({
+  path: '/products/new',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -44,8 +50,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginImport
       parentRoute: typeof rootRoute
     }
-    '/products': {
-      preLoaderRoute: typeof ProductsImport
+    '/products/new': {
+      preLoaderRoute: typeof ProductsNewImport
+      parentRoute: typeof rootRoute
+    }
+    '/products/': {
+      preLoaderRoute: typeof ProductsIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -56,7 +66,8 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   IndexRoute,
   LoginRoute,
-  ProductsRoute,
+  ProductsNewRoute,
+  ProductsIndexRoute,
 ])
 
 /* prettier-ignore-end */

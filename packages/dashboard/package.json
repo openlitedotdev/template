@@ -2,7 +2,6 @@
   "name": "dashboard",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@8.15.4",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,10 +10,11 @@
     "test": "vitest --run"
   },
   "dependencies": {
-    "@openui-org/react": "1.0.0",
+    "@openui-org/react": "1.2.0",
     "@tanstack/react-query": "5.22.2",
     "@tanstack/react-query-devtools": "5.24.0",
     "@tanstack/react-router": "1.16.6",
+    "@tanstack/react-table": "8.15.3",
     "@tanstack/router-devtools": "1.16.6",
     "lucide-react": "0.336.0",
     "react": "18.2.0",

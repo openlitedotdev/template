@@ -2,8 +2,7 @@ import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useEffect } from 'react'
 import { useAdmin } from '@/stores/admin'
 import Dashboard from '@/components/pages/dashboard'
-import Header from '@/components/header'
-import LateralMenu from '@/components/sidebar'
+import Layout from '@/layouts/layout'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -19,14 +18,8 @@ function Home() {
   }, [admin])
 
   return (
-    <>
-      <Header />
-      <div className="flex h-screen overflow-hidden">
-        <LateralMenu />
-        <main className="w-full pt-16">
-          <Dashboard />
-        </main>
-      </div>
-    </>
+    <Layout>
+      <Dashboard />
+    </Layout>
   )
 }
