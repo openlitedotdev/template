@@ -30,8 +30,8 @@ importers:
   packages/dashboard:
     dependencies:
       '@openui-org/react':
-        specifier: 1.1.2
-        version: 1.1.2(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: 1.2.0
+        version: 1.2.0(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@tanstack/react-query':
         specifier: 5.22.2
         version: 5.22.2(react@18.2.0)
@@ -41,6 +41,9 @@ importers:
       '@tanstack/react-router':
         specifier: 1.16.6
         version: 1.16.6(react-dom@18.2.0)(react@18.2.0)
+      '@tanstack/react-table':
+        specifier: 8.15.3
+        version: 8.15.3(react-dom@18.2.0)(react@18.2.0)
       '@tanstack/router-devtools':
         specifier: 1.16.6
         version: 1.16.6(react-dom@18.2.0)(react@18.2.0)
@@ -1362,8 +1365,8 @@ packages:
       - '@types/react-dom'
     dev: false
 
-  /@openui-org/react@1.1.2(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-ByYJBp0qE83f4YpHBJ11ZZnkWZ2Gu9r43ZcuJUzSWHwuqUI9OyXumErSevwa7oc4NrFHU6MuUyoJrbEqzfOLRg==}
+  /@openui-org/react@1.2.0(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-D2+HA/Z77iublMikfnwFyoxP5gvL+NwviaEBTTN1WHHQpGJy/n4DxAhf24Fu0XRHHTcnj/RZBM1fnhMCMSTJRQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -3466,6 +3469,18 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
+  /@tanstack/react-table@8.15.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-aocQ4WpWiAh7R+yxNp+DGQYXeVACh5lv2kk96DjYgFiHDCB0cOFoYMT/pM6eDOzeMXR9AvPoLeumTgq8/0qX+w==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@tanstack/table-core': 8.15.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /@tanstack/router-devtools@1.16.6(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-zjyLuStYA1TM4L1IfgQJ1ZCq36o3UVaLLCVmBBHukxbc6n2cKR2U11BXJW5RpkNZDyAPyGcPLEgJ2qcZCYSDcQ==}
     engines: {node: '>=12'}
@@ -3496,6 +3511,11 @@ packages:
 
   /@tanstack/store@0.1.3:
     resolution: {integrity: sha512-GnolmC8Fr4mvsHE1fGQmR3Nm0eBO3KnZjDU0a+P3TeQNM/dDscFGxtA7p31NplQNW3KwBw4t1RVFmz0VeKLxcw==}
+    dev: false
+
+  /@tanstack/table-core@8.15.3:
+    resolution: {integrity: sha512-wOgV0HfEvuMOv8RlqdR9MdNNqq0uyvQtP39QOvGlggHvIObOE4exS+D5LGO8LZ3LUXxId2IlUKcHDHaGujWhUg==}
+    engines: {node: '>=12'}
     dev: false
 
   /@testing-library/dom@9.3.4:

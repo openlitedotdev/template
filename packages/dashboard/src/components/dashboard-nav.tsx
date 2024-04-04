@@ -1,6 +1,6 @@
 import { Link, useRouter } from '@tanstack/react-router'
 import type { DashboardNavProps } from 'types'
-import { Icons } from './icons'
+import { Icons } from './utils/icons'
 
 export function DashboardNav({ items, setOpen }: DashboardNavProps) {
   const router = useRouter()
