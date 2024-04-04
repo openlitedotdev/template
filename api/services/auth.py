@@ -9,7 +9,7 @@ from api.helpers import http
 def access(user, db: Session):
     db_user = db.query(models.User).filter(models.User.email == user['email']).first()
 
-    if not db_user and not verify_password(user['password'], db_user.password):
+    if not db_user or not verify_password(user['password'], db_user.password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED, 
             detail= http.response(message='Invalid credentials', status=401)
