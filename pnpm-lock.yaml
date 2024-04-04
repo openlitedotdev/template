@@ -30,8 +30,8 @@ importers:
   packages/dashboard:
     dependencies:
       '@openui-org/react':
-        specifier: 1.1.1
-        version: 1.1.1(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: 1.1.2
+        version: 1.1.2(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@tanstack/react-query':
         specifier: 5.22.2
         version: 5.22.2(react@18.2.0)
@@ -1362,8 +1362,8 @@ packages:
       - '@types/react-dom'
     dev: false
 
-  /@openui-org/react@1.1.1(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-W8EAqA4rJLVFlbilTDH2s+9x5wpVqUphf8pTKoeCFV2rUHrgwXrkj7FaM6eiqVwDw5l4tdrDxNnD4ml9gjJ8Sg==}
+  /@openui-org/react@1.1.2(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-ByYJBp0qE83f4YpHBJ11ZZnkWZ2Gu9r43ZcuJUzSWHwuqUI9OyXumErSevwa7oc4NrFHU6MuUyoJrbEqzfOLRg==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
