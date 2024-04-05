@@ -9,15 +9,20 @@ export const Route = createFileRoute('/login')({
 export default function Login() {
   return (
     <>
-      <section className="p-10">
+      <section className="w-full">
         <div className="flex justify-center border border-slater-500/80 rounded-md">
-          <div className="hidden w-1/2 bg-slate-500/10 lg:flex items-center justify-center">
+          <div className="hidden relative pb-16 w-1/2 bg-slate-500/10 lg:flex items-center justify-center">
             <h2 className="text-5xl font-bold min-w-max">Dashboard</h2>
+            <p className="absolute px-16 bottom-10 text-base">
+              Acme Inc
+              “This library has saved me countless hours of work and helped me deliver stunning designs to my clients faster than ever before.”
+              <span className="block pt-4">Sofia Davis</span>
+            </p>
           </div>
-          <div className="lg:w-1/2 flex flex-col items-center border-l border-slater-500/80 px-10 py-12">
+          <div className="w-11/12 lg:w-1/2 flex flex-col items-center lg:border-l border-slater-500/80 px-10 md:px-2 py-16">
             <h2 className="w-full text-center font-bold text-2xl">Login an account</h2>
-            <p className="text-[#a1a1aa] text-center py-3">Enter your email below to create your account</p>
-            <form className="md:py-10 md:px-14 text-slate-500/80 w-10/12">
+            <p className="text-[#a1a1aa] text-center py-6">Enter your email below to create your account</p>
+            <form className="md:py-10 md:px-6 text-slate-500/80 w-10/12">
               <label>Email</label>
               <div className="relative mb-4">
                 <Mail className="absolute top-1/2 -translate-y-1/2 left-2" />
@@ -28,19 +33,19 @@ export default function Login() {
                 <LockKeyhole className="absolute top-1/2 -translate-y-1/2 left-2" />
                 <Input type="password" placeholder="Enter your password" className="pl-10" />
               </div>
-              <div className="py-4">
+              <div className="py-6">
                 <Button className="w-full font-semibold">Login</Button>
               </div>
             </form>
-            <p className="md:px-20 text-center">By clicking continue, you agree to our Terms of Service and Privacy Policy.</p>
+            <p className="w-10/12 lg:w-8/12 m-auto text-center text-sm sm:text-base px-5 text-[#a1a1aa]">
+              By clicking continue, you agree to our
+              <a href="#" className="hover:text-white underline px-1">Terms of Service</a>
+              and
+              <a href="#" className="hover:text-white underline pl-1">Privacy Policy.</a>
+            </p>
           </div>
         </div>
       </section>
-      <footer className="w-full bg-dark-900 p-4 bottom-0 sm:absolute md:relative">
-        <p className="text-sad">
-          @copyrigth - Todos los derechos reservado
-        </p>
-      </footer>
     </>
   )
 }
