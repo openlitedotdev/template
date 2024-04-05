@@ -4,7 +4,8 @@ import type { FormEvent } from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 import { Toaster, toast } from 'sonner'
-import { Button, Input } from '@/components/ui'
+import { Button } from '@openui-org/react'
+import { Input } from '@/components/ui'
 import {
   IconEmail,
   IconEye,
@@ -257,8 +258,8 @@ export default function FormRegister() {
         </div>
 
         <div className="mb-2">
-          <Button className="bg-[#2563EB] text-white py-2 px-4 rounded w-full hover:bg-[#2055c6]">
-            Login
+          <Button variant="default" className=" font-bold py-2 px-4 rounded w-full hover:bg-[#2055c6]">
+            Register
           </Button>
         </div>
         <div className="mb-2 mt-4 flex gap-2">
