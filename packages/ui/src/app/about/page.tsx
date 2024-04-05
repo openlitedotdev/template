@@ -17,7 +17,7 @@ export default function About() {
   return (
     <>
       <Navbar
-        background="shadow-md shadow-gray-dark"
+        background="shadow-md shadow-gray-dark p-4"
         textColor="text-gray-dark"
       />
       <section className="px-2 bg-gray min-h-screen mb-6">
