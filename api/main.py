@@ -16,21 +16,21 @@ load_dotenv()
 models.Base.metadata.create_all(bind=engine)
 config = cloudinary.config(
     secure=True,
-    cloud_name='du2jpakme',
-    api_key='694747433749226',
-    api_secret=os.environ.get('CLOUDINARY_API_SECRET'),
+    cloud_name="du2jpakme",
+    api_key="694747433749226",
+    api_secret=os.environ.get("CLOUDINARY_API_SECRET"),
 )
 
 origins = [
-    'http://localhost:3000',
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=['*'],
-    allow_headers=['*'],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(router_api, prefix=API_V1)

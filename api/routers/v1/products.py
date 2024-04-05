@@ -8,14 +8,14 @@ from api.schemas import types
 router = APIRouter()
 
 
-@router.get('/get')
+@router.get("/get")
 async def get_products(db: Session = Depends(get_db)):
     all_products = products.get(db)
 
-    return http.response(message='Get products in commerces', db=all_products)
+    return http.response(message="Get products in commerces", db=all_products)
 
 
-@router.post('/create')
+@router.post("/create")
 async def create_product(
     name: str = Form(),
     price: int = Form(),
@@ -45,10 +45,10 @@ async def create_product(
         current_user=current_user,
     )
 
-    return http.response(message='New product was created', db=product)
+    return http.response(message="New product was created", db=product)
 
 
-@router.get('/get-by-id/{id}')
+@router.get("/get-by-id/{id}")
 async def get_product_by_id(
     id: int,
     db: Session = Depends(get_db),
@@ -56,10 +56,10 @@ async def get_product_by_id(
 ):
     product_by_id = products.get_by_id(id=id, current_user=current_user, db=db)
 
-    return http.response(message='Product to be edited', db=product_by_id)
+    return http.response(message="Product to be edited", db=product_by_id)
 
 
-@router.patch('/edit/{id}')
+@router.patch("/edit/{id}")
 async def edit_product(
     id: int,
     name: str = Form(),
@@ -91,10 +91,10 @@ async def edit_product(
         current_user=current_user,
     )
 
-    return http.response(message='Product was edited', db=product_edit)
+    return http.response(message="Product was edited", db=product_edit)
 
 
-@router.delete('/delete/{id}')
+@router.delete("/delete/{id}")
 async def delete_product(
     id: int,
     db: Session = Depends(get_db),
@@ -102,4 +102,4 @@ async def delete_product(
 ):
     products_delete = products.delete(id=id, currrent_user=currrent_user, db=db)
 
-    return http.response(message='Product was deleted', db=products_delete)
+    return http.response(message="Product was deleted", db=products_delete)
