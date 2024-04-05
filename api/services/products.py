@@ -26,7 +26,7 @@ def create(
 ):
     user = (
         db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
+        .filter(models.User.email == current_user.get("sub"))
         .first()
     )
 
@@ -56,7 +56,7 @@ def create(
 def get_by_id(id, current_user, db=Session):
     user = (
         db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
+        .filter(models.User.email == current_user.get("sub"))
         .first()
     )
 
@@ -84,7 +84,7 @@ def edit(
 ):
     user = (
         db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
+        .filter(models.User.email == current_user.get("sub"))
         .first()
     )
 
@@ -130,7 +130,7 @@ def edit(
 def delete(id, currrent_user, db=Session):
     user = (
         db.query(models.User)
-        .filter(models.User.email == currrent_user.get('sub'))
+        .filter(models.User.email == currrent_user.get("sub"))
         .first()
     )
 
