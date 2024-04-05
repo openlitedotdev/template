@@ -16,9 +16,9 @@ export async function Footer() {
           <div>
             <h3 className="text-base font-semibold text-card-foreground">Open Land</h3>
             <ul className="mt-4 space-y-4 [&>li]:text-neutral-500">
-              {openLand.map((open) => {
+              {openLand.map((open, index) => {
                 return (
-                  <li className="text-sm">
+                  <li key={index} className="text-sm">
                     <Link href={open.path}>{open.title}</Link>
                   </li>
                 )
@@ -29,9 +29,9 @@ export async function Footer() {
           <div>
             <h3 className="text-base font-semibold text-card-foreground">Contact</h3>
             <ul className="mt-4 space-y-4 [&>li]:text-neutral-500">
-              {openLand.map((open) => {
+              {openLand.map((open, index) => {
                 return (
-                  <li className="text-sm">
+                  <li key={index} className="text-sm">
                     <Link href={open.path}>{open.title}</Link>
                   </li>
                 )
