@@ -1,3 +1,0 @@
-it('example', () => {
-  expect(true)
-})

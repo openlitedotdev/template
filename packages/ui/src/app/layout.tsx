@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
-import Footer from '@/components/footer'
+
+import Header from '@/components/header'
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -14,10 +15,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="ligth">
       <body>
-        <main>{children}</main>
-        <Footer />
+        <Header />
+        <div className="flex min-h-[calc(100dvh-64px)] flex-col">
+          <main className="flex-1">{children}</main>
+        </div>
       </body>
     </html>
   )
