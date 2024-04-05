@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+'import type { Metadata } from 'next'
 
 import './globals.css'
 import Footer from '@/components/footer'
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" class='dark'>
+    <html lang="en" class="dark">
       <body>
         <main>{children}</main>
         <Footer />
