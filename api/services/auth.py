@@ -4,41 +4,56 @@ from fastapi import status, HTTPException
 from api.deps import create_access_token
 from sqlalchemy.orm import Session
 from api.helpers import http
+from api.deps import on_validate_admin
 
 
 def access(user, db: Session):
-    db_user = db.query(models.User).filter(models.User.email == user['email']).first()
+    db_user = db.query(models.User).filter(models.User.email == user["email"]).first()
 
-    if not db_user or not verify_password(user['password'], db_user.password):
+    if not db_user or not verify_password(user["password"], db_user.password):
         raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED, 
-            detail= http.response(message='Invalid credentials', status=401)
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=http.response(message="Invalid credentials", status=401),
         )
 
-    return create_access_token(data={'sub': user['email']})
+    return create_access_token(data={"sub": user["email"]})
 
 
 def create(user, db: Session):
-    user['password'] = get_password_hash(user.pop('password')).decode()
+    user["password"] = get_password_hash(user.pop("password")).decode()
 
     user_exists = (
-        db.query(models.User).filter(models.User.email == user['email']).first()
+        db.query(models.User).filter(models.User.email == user["email"]).first()
     )
 
     if user_exists:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail= http.response(message='Email already registered',status=400)
+            detail=http.response(message="Email already registered", status=400),
         )
 
     db_user = models.User(
-        name=user.get('name'),
-        email=user.get('email').lower(),
-        password=user.get('password'),
-        phone=user.get('phone'),
-        role=user.get('role'),
+        name=user.get("name"),
+        email=user.get("email").lower(),
+        password=user.get("password"),
+        phone=user.get("phone"),
+        role=user.get("role"),
     )
 
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
+
+
+def get_user(current_user, db=Session):
+    user = (
+        db.query(models.User)
+        .filter(models.User.email == current_user.get("sub"))
+        .first()
+    )
+
+    on_validate_admin(user.role)
+
+    db.query(models.User).all()
+
+    return db.query(models.User).all()
