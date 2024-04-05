@@ -9,7 +9,7 @@ export default function AuthLayout({
   return (
     <>
       <Navbar
-        background="shadow-md shadow-gray-dark "
+        background="shadow-md shadow-gray-dark p-4"
         textColor="text-gray-dark"
       />
       <section className="w-full  bg-[#F5F5F7] mb-5 mt-2">
