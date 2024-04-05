@@ -52,7 +52,7 @@ export default function AboutPage() {
         <div>
           <ul>
             <li>Single page checkout (including login)</li>
-            <li>Portable to other frameworks (doesn't use Next.js components)</li>
+            <li>Portable to other frameworks (doesn&apos;t use Next.js components)</li>
             <li>Adyen integration</li>
             <li>Stripe integration</li>
             <li>Customer address book</li>
