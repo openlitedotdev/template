@@ -1,3 +1,3 @@
 it('example test', () => {
-  expect(true)  
+  expect(true)
 })
