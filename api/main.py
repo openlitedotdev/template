@@ -23,6 +23,7 @@ config = cloudinary.config(
 
 origins = [
     "http://localhost:3000",
+    "http://localhost:5173",
     "https://dashboard-commerce.up.railway.app/",
     "https://ui-commerce.up.railway.app/"
 ]
