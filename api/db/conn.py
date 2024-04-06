@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 # Prod
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
 

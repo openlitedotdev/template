@@ -13,7 +13,7 @@ def get(db=Session):
 
 def create(name, image, description, current_user, db=Session):
     user = (
-        db.query(models.User).filter(models.User.email == current_user['sub']).first()
+        db.query(models.User).filter(models.User.email == current_user["sub"]).first()
     )
 
     on_validate_admin(user.role)
@@ -32,7 +32,7 @@ def create(name, image, description, current_user, db=Session):
 def get_by_id(id, current_user, db=Session):
     user = (
         db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
+        .filter(models.User.email == current_user.get("sub"))
         .first()
     )
 
@@ -46,7 +46,7 @@ def get_by_id(id, current_user, db=Session):
 def edit(id, name, image, description, current_user, db=Session):
     user = (
         db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
+        .filter(models.User.email == current_user.get("sub"))
         .first()
     )
     on_validate_admin(user.role)
@@ -72,7 +72,7 @@ def edit(id, name, image, description, current_user, db=Session):
 def delete(id, current_user, db=Session):
     user = (
         db.query(models.User)
-        .filter(models.User.email == current_user.get('sub'))
+        .filter(models.User.email == current_user.get("sub"))
         .first()
     )
     on_validate_admin(user.role)

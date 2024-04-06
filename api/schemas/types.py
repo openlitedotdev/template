@@ -6,7 +6,7 @@ class UserCreate(BaseModel):
     email: str
     password: str
     phone: str
-    role: str = 'user'
+    role: str = "user"
 
 
 class UserLogin(BaseModel):
@@ -19,7 +19,7 @@ class User(BaseModel):
     email: str
     password: str
     phone: str
-    role: str = 'user'
+    role: str = "user"
 
 
 class CategoryCreate(BaseModel):
