@@ -12,6 +12,7 @@ router = APIRouter()
 @router.post("/login")
 async def login(user_credentials: types.UserLogin, db: Session = Depends(get_db)):
     user = user_credentials.model_dump()
+
     results = []
     if user["email"] == "" or user["password"] == "":
         return {
@@ -21,7 +22,11 @@ async def login(user_credentials: types.UserLogin, db: Session = Depends(get_db)
 
     token = auth.access(user=user, db=db)
 
-    results.append({"access_token": token, "token_type": "Bearer"})
+    user_info = auth.get_user_by_email(user=user, db=db)
+
+    results.append(
+        {"access_token": token, "token_type": "Bearer", "id_user": user_info.id}
+    )
 
     return http.response(message="User logger successfuly", db=results)
 

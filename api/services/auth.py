@@ -57,3 +57,9 @@ def get_user(current_user, db=Session):
     db.query(models.User).all()
 
     return db.query(models.User).all()
+
+
+def get_user_by_email(user, db: Session):
+    db_user = db.query(models.User).filter(models.User.email == user["email"]).first()
+
+    return db_user
