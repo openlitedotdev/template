@@ -8,7 +8,7 @@ interface Admin {
 
 export interface AdminState {
   credentials: Admin | null
-  onLogged: () => void
+  onLogged: (by: Admin) => void
   onLogout: () => void
 }
 

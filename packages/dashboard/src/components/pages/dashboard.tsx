@@ -1,14 +1,21 @@
 import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle, ScrollArea } from '@openui-org/react'
 import { Overview } from '../overview'
 import Sales from '../sales'
+import { useAdmin } from '@/stores/use-admin'
 
 export default function Dashboard() {
+  const admin = useAdmin(state => state.credentials)
+
   return (
     <ScrollArea className="h-full">
       <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
         <div className="flex items-center justify-between space-y-2">
           <h2 className="text-3xl font-bold tracking-tight text-white">
-            Hi, Welcome back 👋
+            Hi, Welcome back
+            {' '}
+            {admin!.name}
+            {' '}
+            👋
           </h2>
           <div className="hidden md:flex items-center space-x-2">
             <Button>Download</Button>
