@@ -127,3 +127,22 @@ async def get_users(
         )
 
     return http.response(message="Users found", db=new_users)
+
+
+@router.get("/user-by-id/{id}")
+async def get_user_by_id(id: int, db: Session = Depends(get_db)):
+    results = []
+    user = auth.get_user_by_id(id=id, db=db)
+    
+    if not user:
+        raise HTTPException(
+            status_code=404,
+            detail=http.response(
+                message="User not Found",
+                status=404,
+            ),
+        )
+
+    results.append(user)
+
+    return http.response(message="User found", db=results)
