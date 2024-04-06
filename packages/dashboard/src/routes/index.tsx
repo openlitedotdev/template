@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useEffect } from 'react'
-import { useAdmin } from '@/stores/admin'
+import { useAdmin } from '@/stores/use-admin'
 import Dashboard from '@/components/pages/dashboard'
 import Layout from '@/layouts/layout'
 
@@ -9,7 +9,7 @@ export const Route = createFileRoute('/')({
 })
 
 function Home() {
-  const admin = useAdmin(state => state.credentials)
+  const admin = useAdmin()
   const navigate = useNavigate({ from: '/' })
 
   useEffect(() => {
