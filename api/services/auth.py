@@ -45,7 +45,7 @@ def create(user, db: Session):
     db.refresh(db_user)
 
 
-def get_user(current_user, db=Session):
+def get_user(current_user, db: Session):
     user = (
         db.query(models.User)
         .filter(models.User.email == current_user.get("sub"))
@@ -57,9 +57,13 @@ def get_user(current_user, db=Session):
     db.query(models.User).all()
 
     return db.query(models.User).all()
+  
+def get_user_by_id(id: int, db: Session):
+    db_user = db.query(models.User).filter(models.User.id == id).first()
 
+    return db_user
 
 def get_user_by_email(user, db: Session):
     db_user = db.query(models.User).filter(models.User.email == user["email"]).first()
-
+    
     return db_user
