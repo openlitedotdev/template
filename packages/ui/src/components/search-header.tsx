@@ -1,3 +1,4 @@
+import { Input } from '@openui-org/react'
 import { SearchIcon } from 'lucide-react'
 
 export function SearchBar() {
@@ -7,13 +8,12 @@ export function SearchBar() {
     >
       <label className="w-full">
         <span className="sr-only">search for products</span>
-        <input
+        <Input
           type="text"
           name="search"
           placeholder="Search for products..."
           autoComplete="on"
           required
-          className="h-10 w-full rounded-md border border-neutral-300 bg-transparent bg-white px-4 py-2 pr-10 text-sm text-black placeholder:text-neutral-500 focus:border-black focus:ring-black"
         />
       </label>
       <div className="absolute inset-y-0 right-0">

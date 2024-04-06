@@ -8,20 +8,20 @@ import { SearchBar } from './search-header'
 const links = [
   { name: 'Categories', path: '/' },
   { name: 'About', path: '/' },
-  { name: 'example', path: '/' },
-  { name: 'example', path: '/' },
+  { name: 'Contact', path: '/' },
+  { name: 'FAQ', path: '/' },
 ]
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-20 bg-neutral-100/50 backdrop-blur-md">
-      <div className="mx-auto max-w-7xl px-3 sm:px-8">
-        <div className="flex h-16 justify-between gap-6 items-center">
+    <header className="sticky top-0 z-20 bg-muted backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-3 sm:px-6">
+        <div className="flex h-16 justify-between gap-8 items-center">
           <div className="flex items-center font-bold">
             <Link href="https://github.com/open-land/commerce">COMMERCE</Link>
           </div>
-          <nav className="flex w-full gap-4 lg:gap-6" aria-label="Main navigation">
-            <ul className="gap-4 overflow-x-auto whitespace-nowrap md:flex lg:gap-8 lg:px-0">
+          <nav className="hidden lg:flex w-full gap-4" aria-label="Main navigation">
+            <ul className="gap-4 overflow-x-auto whitespace-nowrap md:flex lg:gap-5 lg:px-0">
               {links.map((link, index) => {
                 return (
                   <li key={index} className="inline-flex">
@@ -31,20 +31,22 @@ export default function Header() {
               })}
             </ul>
           </nav>
-          <div className="hidden lg:flex">
-            <SearchBar />
+          <div className="flex items-center gap-3">
+            <div className="hidden lg:flex">
+              <SearchBar />
+            </div>
+            <div className="flex items-center gap-2">
+              <UserNav />
+              <ShoppingBag className="size-8 cursor-pointer" />
+            </div>
+            <div className="block lg:!hidden">
+              <MobileSidebar />
+            </div>
+            <Button className="hidden lg:flex items-center gap-2 shadow">
+              <LayoutDashboard />
+              Dashboard
+            </Button>
           </div>
-          <div className="flex items-center gap-2">
-            <UserNav />
-            <ShoppingBag className="size-6 cursor-pointer" />
-          </div>
-          <div className="block lg:!hidden">
-            <MobileSidebar />
-          </div>
-          <Button className="flex items-center gap-2">
-            <LayoutDashboard />
-            Dashboard
-          </Button>
         </div>
       </div>
     </header>

@@ -12,7 +12,7 @@ export function MobileSidebar() {
     <>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <MenuIcon className="size-6 cursor-pointer" />
+          <MenuIcon className="size-8 cursor-pointer" />
         </SheetTrigger>
         <SheetContent side="left" className="!px-0">
           <div className="space-y-4 py-4">

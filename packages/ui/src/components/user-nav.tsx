@@ -7,7 +7,7 @@ export function UserNav() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <User className="size-6 cursor-pointer" />
+        <User className="size-8 cursor-pointer" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end" forceMount>
         <DropdownMenuGroup>
