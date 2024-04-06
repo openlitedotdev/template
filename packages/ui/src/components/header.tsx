@@ -6,9 +6,8 @@ import { MobileSidebar } from './mobile-sidebar'
 import { SearchBar } from './search-header'
 
 const links = [
-  { name: 'Categories', path: '/' },
-  { name: 'About', path: '/' },
-  { name: 'Contact', path: '/' },
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
   { name: 'FAQ', path: '/' },
 ]
 
@@ -18,14 +17,14 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-3 sm:px-6">
         <div className="flex h-16 justify-between gap-8 items-center">
           <div className="flex items-center font-bold">
-            <Link href="https://github.com/open-land/commerce">COMMERCE</Link>
+            <Link href="https://github.com/open-land/commerce" target="_blank">COMMERCE</Link>
           </div>
           <nav className="hidden lg:flex w-full gap-4" aria-label="Main navigation">
             <ul className="gap-4 overflow-x-auto whitespace-nowrap md:flex lg:gap-5 lg:px-0">
               {links.map((link, index) => {
                 return (
                   <li key={index} className="inline-flex">
-                    <a href="#" className="border-transparent text-card- hover:text-card-foreground/90 inline-flex items-center border-b-2 pt-px text-sm font-medium">{link.name}</a>
+                    <Link href={link.path} className="border-transparent text-card- hover:text-card-foreground/90 inline-flex items-center border-b-2 pt-px text-sm font-medium">{link.name}</Link>
                   </li>
                 )
               })}
