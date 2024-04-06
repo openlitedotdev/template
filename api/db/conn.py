@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Dev
+SQLALCHEMY_DATABASE_URL = "sqlite:///commerce.sqlite"
 
 # Prod
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"

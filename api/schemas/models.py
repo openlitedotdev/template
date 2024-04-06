@@ -4,29 +4,29 @@ from api.db.conn import Base
 
 
 class User(Base):
-    __tablename__ = 'users'
+    __tablename__ = "users"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
     password = Column(String)
     email = Column(String, unique=True, index=True)
     phone = Column(String)
-    role = Column(String, default='user')
+    role = Column(String, default="user")
 
 
 class Category(Base):
-    __tablename__ = 'categories'
+    __tablename__ = "categories"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
     image = Column(String)
     description = Column(String)
     image_publi_id = Column(String)
-    products = relationship('Product', back_populates='category')
+    products = relationship("Product", back_populates="category")
 
 
 class Product(Base):
-    __tablename__ = 'products'
+    __tablename__ = "products"
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
@@ -39,6 +39,6 @@ class Product(Base):
     quantity = Column(Integer)
     description = Column(String, index=True)
     brand = Column(String)
-    category_id = Column(Integer, ForeignKey('categories.id'))
+    category_id = Column(Integer, ForeignKey("categories.id"))
 
-    category = relationship('Category', back_populates='products')
+    category = relationship("Category", back_populates="products")
