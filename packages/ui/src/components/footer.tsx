@@ -1,9 +1,15 @@
 import Link from 'next/link'
 
 const openLand = [
+  { title: 'Github', path: '/' },
   { title: 'About', path: '/' },
-  { title: 'About', path: '/' },
-  { title: 'About', path: '/' },
+  { title: 'Documentation', path: '/' },
+]
+
+const contact = [
+  { title: 'openland.org@gmail.com', path: '/' },
+  { title: 'Figma', path: '/' },
+  { title: 'Team', path: '/' },
 ]
 
 export async function Footer() {
@@ -29,7 +35,7 @@ export async function Footer() {
           <div>
             <h3 className="text-base font-semibold text-card-foreground">Contact</h3>
             <ul className="mt-4 space-y-4 [&>li]:text-neutral-500">
-              {openLand.map((open, index) => {
+              {contact.map((open, index) => {
                 return (
                   <li key={index} className="text-sm">
                     <Link href={open.path}>{open.title}</Link>
