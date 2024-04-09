@@ -8,11 +8,15 @@ This is the source code for https://ui-commerce.up.railway.app/ by Open Land.
 
 ## Project Information
 
-**Goals**
+### Features
 
-- Open Source
-- Scalable
-- Easy to use
+- Open sources
+- Dashboard
+- Api (Totally open source)
+- Customize
+- Dark Mode support
+- Shopping cart
+- Responsive design
 
 ## Getting started (frontend only)
 
