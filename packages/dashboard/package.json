@@ -10,7 +10,7 @@
     "test": "vitest --run"
   },
   "dependencies": {
-    "@openui-org/react": "1.2.0",
+    "@openui-org/react": "1.5.0",
     "@tanstack/react-query": "5.22.2",
     "@tanstack/react-query-devtools": "5.24.0",
     "@tanstack/react-router": "1.16.6",
