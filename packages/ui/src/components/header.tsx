@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button } from '@openui-org/react'
+import { Button } from '@openui-org/react/components'
 import { LayoutDashboard, ShoppingBag } from 'lucide-react'
 import { UserNav } from './user-nav'
 import { MobileSidebar } from './mobile-sidebar'

@@ -1,4 +1,4 @@
-import { Input } from '@openui-org/react'
+import { Input } from '@openui-org/react/components'
 import { SearchIcon } from 'lucide-react'
 
 export function SearchBar() {
