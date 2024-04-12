@@ -14,6 +14,9 @@ export default defineConfig({
       'types': resolve(__dirname, './types'),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 10000,
+  },
 
   test: {
     globals: true,

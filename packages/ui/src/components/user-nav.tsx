@@ -1,6 +1,6 @@
 'use client'
 
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@openui-org/react'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@openui-org/react/components'
 import { User } from 'lucide-react'
 
 export function UserNav() {
