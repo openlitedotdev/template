@@ -4,6 +4,7 @@ import { LayoutDashboard, ShoppingBag } from 'lucide-react'
 import { UserNav } from './user-nav'
 import { MobileSidebar } from './mobile-sidebar'
 import { SearchBar } from './search-header'
+import { LoginRegister } from './login-register'
 
 const links = [
   { name: 'Home', path: '/' },
