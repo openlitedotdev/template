@@ -24,7 +24,7 @@ export function DataTable<TData, TValue>({ columns, data, searchKey }: DataTable
         onChange={event => table.getColumn(searchKey)?.setFilterValue(event.target.value)}
         className="w-full md:max-w-sm"
       />
-      <ScrollArea className="rounded-md border h-[calc(85vh-200px)]">
+      <ScrollArea className="rounded-md border h-[calc(80vh-200px)]">
         <Table className="relative">
           <TableHeader>
             {table.getHeaderGroups().map(headerGroup => (
@@ -77,7 +77,7 @@ export function DataTable<TData, TValue>({ columns, data, searchKey }: DataTable
         </Table>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
-      <div className="flex items-center justify-end space-x-2 py-4">
+      <div className="flex items-center justify-end space-x-2 py-3">
         <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length}
           {' '}
