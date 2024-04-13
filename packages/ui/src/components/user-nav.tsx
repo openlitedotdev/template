@@ -8,9 +8,9 @@ export function UserNav() {
   return (
     <Dialog>
       <DialogTrigger><User className="size-8 cursor-pointer" /></DialogTrigger>
-      <DialogContent>
+      <DialogContent className="w-11/12 max-h-[90%] rounded-sm overflow-auto">
         <DialogHeader>
-          <DialogDescription className="py-3">
+          <DialogDescription>
             <LoginRegister />
           </DialogDescription>
         </DialogHeader>

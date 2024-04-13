@@ -2,13 +2,13 @@ import { Button, Input, Label, Tabs, TabsContent, TabsList, TabsTrigger } from '
 
 export function LoginRegister() {
   return (
-    <Tabs defaultValue="login" className="bg-background w-full">
-      <TabsList className="bg-background">
-        <TabsTrigger value="login" className="bg-primary text-background">Login</TabsTrigger>
-        <TabsTrigger value="register" className="bg-primary text-background">Register</TabsTrigger>
+    <Tabs defaultValue="login" className="bg-background w-full text-primary">
+      <TabsList className="bg-background text-primary">
+        <TabsTrigger value="login" className="data-[state=active]:bg-primary data-[state=active]:text-background">Login</TabsTrigger>
+        <TabsTrigger value="register" className="data-[state=active]:bg-primary data-[state=active]:text-background">Register</TabsTrigger>
       </TabsList>
       <TabsContent value="login" className="border-0">
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4 text-start">
           <div>
             <Label>Email</Label>
             <Input type="email" placeholder="jondoe@gmail.com" />
@@ -28,7 +28,7 @@ export function LoginRegister() {
         </form>
       </TabsContent>
       <TabsContent value="register" className="border-0">
-        <form className="flex flex-col gap-2">
+        <form className="flex flex-col gap-2 text-start">
           <div>
             <Label>User</Label>
             <Input type="email" placeholder="John Abraham" />
