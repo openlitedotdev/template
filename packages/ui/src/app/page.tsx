@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { ProductList } from '@/components/product-list'
 import { Product } from '@/components/product'
 
