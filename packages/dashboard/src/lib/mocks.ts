@@ -3,6 +3,10 @@ export interface Product {
   price: string
   amount: string
 }
+export interface Categories {
+  name: string
+  description: string
+}
 
 export const productsMocks: Product[] = [
   {
@@ -54,5 +58,48 @@ export const productsMocks: Product[] = [
     name: 'product10',
     price: '14.99',
     amount: '3',
+  },
+]
+
+export const categoriesMocks: Categories[] = [
+  {
+    name: 'categories1',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories2',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories3',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories4',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories5',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories6',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories7',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories8',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories9',
+    description: 'lorem ipsum dolor sit amet',
+  },
+  {
+    name: 'categories10',
+    description: 'lorem ipsum dolor sit amet',
   },
 ]
