@@ -1,12 +1,4 @@
-export interface Product {
-  name: string
-  price: string
-  amount: string
-}
-export interface Categories {
-  name: string
-  description: string
-}
+import type { Categories, Customer, Product } from 'types/index'
 
 export const productsMocks: Product[] = [
   {
@@ -101,5 +93,68 @@ export const categoriesMocks: Categories[] = [
   {
     name: 'categories10',
     description: 'lorem ipsum dolor sit amet',
+  },
+]
+
+export const customersMocks: Customer[] = [
+  {
+    name: 'User 1',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 2',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 3',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 4',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 5',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 6',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 7',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 8',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 9',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
+  },
+  {
+    name: 'User 10',
+    email: 'jondoe@email.com',
+    phone: '300789090',
+    role: 'user',
   },
 ]

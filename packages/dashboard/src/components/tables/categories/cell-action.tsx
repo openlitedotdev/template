@@ -1,8 +1,8 @@
 import { Edit, MoreHorizontal, Trash } from 'lucide-react'
 import { Button, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@openui-org/react'
 import { useState } from 'react'
+import type { Categories } from 'types/index'
 import { AlertModal } from '@/components/utils/alert-modal'
-import type { Categories } from '@/lib/mocks'
 
 interface CellActionProps {
   data: Categories

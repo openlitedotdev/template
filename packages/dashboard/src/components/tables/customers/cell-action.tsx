@@ -1,11 +1,11 @@
 import { Edit, MoreHorizontal, Trash } from 'lucide-react'
 import { Button, DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@openui-org/react'
 import { useState } from 'react'
-import type { Product } from 'types/index'
+import type { Customer } from 'types/index'
 import { AlertModal } from '@/components/utils/alert-modal'
 
 interface CellActionProps {
-  data: Product
+  data: Customer
 }
 
 export const CellAction: React.FC<CellActionProps> = () => {

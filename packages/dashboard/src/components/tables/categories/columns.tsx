@@ -1,7 +1,7 @@
 import type { ColumnDef } from '@tanstack/react-table'
 import { Checkbox } from '@openui-org/react'
+import type { Categories } from 'types/index'
 import { CellAction } from './cell-action'
-import type { Categories } from '@/lib/mocks'
 
 export const columns: ColumnDef<Categories>[] = [
   {

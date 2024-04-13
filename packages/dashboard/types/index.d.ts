@@ -4,6 +4,23 @@ export interface Response<T> {
   status: number
 }
 
+export interface Product {
+  name: string
+  price: string
+  amount: string
+}
+export interface Categories {
+  name: string
+  description: string
+}
+
+export interface Customer {
+  name: string
+  email: string
+  phone: string
+  role: string
+}
+
 export interface Login {
   access_token: string
   token_type: string
