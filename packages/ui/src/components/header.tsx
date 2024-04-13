@@ -14,7 +14,7 @@ const links = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-20 bg-muted backdrop-blur-md">
-      <div className="mx-auto max-w-7xl px-3 sm:px-6">
+      <div className="mx-auto max-w-screen-2xl px-3 sm:px-8">
         <div className="flex h-16 justify-between gap-8 items-center">
           <div className="flex items-center font-bold">
             <Link href="https://github.com/open-land/commerce" target="_blank">COMMERCE</Link>
@@ -41,9 +41,11 @@ export default function Header() {
             <div className="block lg:!hidden">
               <MobileSidebar />
             </div>
-            <Button className="hidden lg:flex items-center gap-2 shadow">
-              <LayoutDashboard />
-              Dashboard
+            <Button className="shadow" asChild>
+              <Link href="https://dashboard-commerce.up.railway.app/" target="_blank" className="hidden lg:flex items-center gap-2 ">
+                <LayoutDashboard />
+                Dashboard
+              </Link>
             </Button>
           </div>
         </div>
