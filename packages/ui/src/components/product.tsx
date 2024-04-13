@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import clsx from 'clsx'
 import { ShoppingBag } from 'lucide-react'
 
 interface ProductProps {
   product: {
-    name: string
-    price: string
-    description: string
+    name?: string
+    price?: string
+    description?: string
+    URL: string
   }
 }
 
@@ -16,7 +18,7 @@ export function Product(props: ProductProps) {
     <Link href="#" className="group">
       <div className="bg-muted/90 rounded overflow-hidden transition-all duration-500 relative aspect-square">
         <Image
-          src="/product-test.webp"
+          src={props.product.URL}
           alt="Image product test"
           className="w-full h-full object-center object-cover absolute block"
           width="400"
@@ -30,7 +32,7 @@ export function Product(props: ProductProps) {
         </div>
       </div>
 
-      <div className="mt-2 flex justify-between">
+      <div className={clsx('mt-2 flex justify-between', { hidden: !props.product.name })}>
         <div className="mb-0.5">
           <h3 className="mt-0.5 text-base font-semibold text-primary relative">
             {props.product.name}
