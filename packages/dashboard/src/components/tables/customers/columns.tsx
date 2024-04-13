@@ -1,9 +1,9 @@
 import type { ColumnDef } from '@tanstack/react-table'
 import { Checkbox } from '@openui-org/react'
-import type { Product } from 'types/index'
+import type { Customer } from 'types/index'
 import { CellAction } from './cell-action'
 
-export const columns: ColumnDef<Product>[] = [
+export const columns: ColumnDef<Customer>[] = [
   {
     id: 'select',
     header: ({ table }) => (
@@ -28,12 +28,16 @@ export const columns: ColumnDef<Product>[] = [
     header: 'NAME',
   },
   {
-    accessorKey: 'price',
-    header: 'PRICE',
+    accessorKey: 'role',
+    header: 'ROLE',
   },
   {
-    accessorKey: 'amount',
-    header: 'AMOUNT',
+    accessorKey: 'email',
+    header: 'EMAIL',
+  },
+  {
+    accessorKey: 'phone',
+    header: 'PHONE',
   },
   {
     id: 'actions',

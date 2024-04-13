@@ -14,8 +14,10 @@ import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
 import { Route as ProductsIndexImport } from './routes/products/index'
 import { Route as LoginIndexImport } from './routes/login/index'
+import { Route as CustomersIndexImport } from './routes/customers/index'
 import { Route as CategoriesIndexImport } from './routes/categories/index'
 import { Route as ProductsNewImport } from './routes/products/new'
+import { Route as CustomersNewImport } from './routes/customers/new'
 import { Route as CategoriesNewImport } from './routes/categories/new'
 
 // Create/Update Routes
@@ -35,6 +37,11 @@ const LoginIndexRoute = LoginIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const CustomersIndexRoute = CustomersIndexImport.update({
+  path: '/customers/',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const CategoriesIndexRoute = CategoriesIndexImport.update({
   path: '/categories/',
   getParentRoute: () => rootRoute,
@@ -42,6 +49,11 @@ const CategoriesIndexRoute = CategoriesIndexImport.update({
 
 const ProductsNewRoute = ProductsNewImport.update({
   path: '/products/new',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CustomersNewRoute = CustomersNewImport.update({
+  path: '/customers/new',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -62,12 +74,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoriesNewImport
       parentRoute: typeof rootRoute
     }
+    '/customers/new': {
+      preLoaderRoute: typeof CustomersNewImport
+      parentRoute: typeof rootRoute
+    }
     '/products/new': {
       preLoaderRoute: typeof ProductsNewImport
       parentRoute: typeof rootRoute
     }
     '/categories/': {
       preLoaderRoute: typeof CategoriesIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/customers/': {
+      preLoaderRoute: typeof CustomersIndexImport
       parentRoute: typeof rootRoute
     }
     '/login/': {
@@ -86,8 +106,10 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   IndexRoute,
   CategoriesNewRoute,
+  CustomersNewRoute,
   ProductsNewRoute,
   CategoriesIndexRoute,
+  CustomersIndexRoute,
   LoginIndexRoute,
   ProductsIndexRoute,
 ])
