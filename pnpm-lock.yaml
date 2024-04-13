@@ -30,8 +30,8 @@ importers:
   packages/dashboard:
     dependencies:
       '@openui-org/react':
-        specifier: 1.5.0
-        version: 1.5.0(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: 1.5.1
+        version: 1.5.1(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       '@tanstack/react-query':
         specifier: 5.22.2
         version: 5.22.2(react@18.2.0)
@@ -124,8 +124,8 @@ importers:
   packages/ui:
     dependencies:
       '@openui-org/react':
-        specifier: 1.5.0
-        version: 1.5.0(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
+        specifier: 1.5.1
+        version: 1.5.1(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1)
       embla-carousel-autoplay:
         specifier: 8.0.0
         version: 8.0.0(embla-carousel@8.0.0)
@@ -1346,14 +1346,14 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  /@openui-org/react@1.5.0(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-vhVJzByflaI7QxBdrCC+phHSRJIu8dtcPOigXgbh7c26U04GieBoUT/ztfe6fndDObvpRDCufzzjUcFF+TtsNA==}
+  /@openui-org/react@1.5.1(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-plK10jtLWV8k9aNaOAao87yhOQLzSUeGTF42BbX12UM8EA/ZnziR/f9762R9hwnLvE4C9jHDR8MZq1ApGTkwhQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
       tailwindcss: ^3.0.0
     dependencies:
-      '@openui-org/theme': 1.1.0
+      '@openui-org/theme': 1.1.1
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-alert-dialog': 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-aspect-ratio': 1.0.3(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
@@ -1374,10 +1374,8 @@ packages:
       '@radix-ui/react-tooltip': 1.0.7(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)
       class-variance-authority: 0.7.0
       clsx: 2.1.0
-      date-fns: 3.6.0
       embla-carousel-react: 8.0.0(react@18.2.0)
       react: 18.2.0
-      react-day-picker: 8.10.0(date-fns@3.6.0)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
       tailwind-merge: 2.2.2
       tailwindcss: 3.4.1
@@ -1387,14 +1385,14 @@ packages:
       - '@types/react-dom'
     dev: false
 
-  /@openui-org/react@1.5.0(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
-    resolution: {integrity: sha512-vhVJzByflaI7QxBdrCC+phHSRJIu8dtcPOigXgbh7c26U04GieBoUT/ztfe6fndDObvpRDCufzzjUcFF+TtsNA==}
+  /@openui-org/react@1.5.1(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-plK10jtLWV8k9aNaOAao87yhOQLzSUeGTF42BbX12UM8EA/ZnziR/f9762R9hwnLvE4C9jHDR8MZq1ApGTkwhQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
       tailwindcss: ^3.0.0
     dependencies:
-      '@openui-org/theme': 1.1.0
+      '@openui-org/theme': 1.1.1
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-alert-dialog': 1.0.5(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-aspect-ratio': 1.0.3(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
@@ -1415,10 +1413,8 @@ packages:
       '@radix-ui/react-tooltip': 1.0.7(@types/react-dom@18.2.19)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
       class-variance-authority: 0.7.0
       clsx: 2.1.0
-      date-fns: 3.6.0
       embla-carousel-react: 8.0.0(react@18.2.0)
       react: 18.2.0
-      react-day-picker: 8.10.0(date-fns@3.6.0)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
       tailwind-merge: 2.2.2
       tailwindcss: 3.4.1
@@ -1428,8 +1424,8 @@ packages:
       - '@types/react-dom'
     dev: false
 
-  /@openui-org/theme@1.1.0:
-    resolution: {integrity: sha512-iqFbPLj1MOd9L8B6mQ3AXde7ioc9K8kDXTOwX5Epj6VjdHYz/jcLs60PKlSCs2fAymdzEJmJyjOWsfrNMwnqYw==}
+  /@openui-org/theme@1.1.1:
+    resolution: {integrity: sha512-KGFFGxROUd+KRwiNiaUHPMtL8B56hJTZppFhTK4gc9cFu35yGOGlZhd1YlL7AnGsAc23ZGoTYi7O+k21bt6cpg==}
     dev: false
 
   /@pkgjs/parseargs@0.11.0:
@@ -5291,10 +5287,6 @@ packages:
       '@babel/runtime': 7.24.1
     dev: false
 
-  /date-fns@3.6.0:
-    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
-    dev: false
-
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -8244,16 +8236,6 @@ packages:
       ini: 1.3.8
       minimist: 1.2.8
       strip-json-comments: 2.0.1
-    dev: false
-
-  /react-day-picker@8.10.0(date-fns@3.6.0)(react@18.2.0):
-    resolution: {integrity: sha512-mz+qeyrOM7++1NCb1ARXmkjMkzWVh2GL9YiPbRjKe0zHccvekk4HE+0MPOZOrosn8r8zTHIIeOUXTmXRqmkRmg==}
-    peerDependencies:
-      date-fns: ^2.28.0 || ^3.0.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      date-fns: 3.6.0
-      react: 18.2.0
     dev: false
 
   /react-dom@18.2.0(react@18.2.0):
