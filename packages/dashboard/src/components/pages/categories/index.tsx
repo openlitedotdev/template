@@ -1,2 +1,3 @@
-export * from './get'
-export * from './new'
+export * from './categories'
+export * from './create-category'
+export * from './update-category'

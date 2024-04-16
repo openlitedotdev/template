@@ -1,3 +1,3 @@
-export * from './get'
-export * from './new'
-export * from './update'
+export * from './products'
+export * from './create-product'
+export * from './update-product'

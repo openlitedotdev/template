@@ -1,0 +1,3 @@
+export function UpdateProduct() {
+  return <></>
+}

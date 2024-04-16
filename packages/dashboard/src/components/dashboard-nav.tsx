@@ -1,9 +1,9 @@
-import { Link, useRouter } from '@tanstack/react-router'
+import { Link, useLocation } from 'wouter'
 import type { DashboardNavProps } from 'types'
 import { Icons } from './utils/icons'
 
 export function DashboardNav({ items, setOpen }: DashboardNavProps) {
-  const router = useRouter()
+  const [location] = useLocation()
 
   return (
     <nav className="grid items-start gap-3">
@@ -20,7 +20,7 @@ export function DashboardNav({ items, setOpen }: DashboardNavProps) {
               }}
             >
               <span className={`
-                flex items-center rounded-md px-3 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/90' ${router.state.location.pathname === item.href ? 'bg-secondary/90' : 'bg-transparent'} ${item.disabled && 'cursor-not-allowed opacity-80'}`}
+                flex items-center rounded-md px-3 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/90' ${location === item.href ? 'bg-secondary/90' : 'bg-transparent'} ${item.disabled && 'cursor-not-allowed opacity-80'}`}
               >
                 <Icon className="mr-2 size-6" />
                 <span>{item.title}</span>
