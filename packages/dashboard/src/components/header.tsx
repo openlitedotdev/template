@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router'
+import { Link } from 'wouter'
 import { UserNav } from './user-nav'
 import { MobileSidebar } from './mobile-sidebar'
 import { ModeToggle } from './mode-toggle'

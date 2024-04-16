@@ -29,5 +29,5 @@
     "skipLibCheck": true
   },
   "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["src", "src/shims.d.ts", "src/routeTree.gen.ts", "src/main.tsx", "devtools.tsx", "src/components", "src/vite-env.d.ts", "src/hookssrc/routesutes", "src/stores"]
+  "include": ["src"]
 }

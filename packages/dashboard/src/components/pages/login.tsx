@@ -1,9 +1,9 @@
-import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { Button, Input, Label } from '@openui-org/react'
 import { LockKeyhole, Mail, RotateCcw } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import type { Admin, Login as LoginType, Response } from 'types/index'
 import { toast } from 'sonner'
+import { useLocation } from 'wouter'
 import { useAxios, useRole } from '@/hooks'
 import { useLoading } from '@/stores/use-loading'
 import { useAdmin } from '@/stores/use-admin'
@@ -13,16 +13,12 @@ interface FormData {
   password: string
 }
 
-export const Route = createFileRoute('/login/')({
-  component: Login,
-})
-
 export default function Login() {
   const { register, handleSubmit } = useForm<FormData>()
   const axios = useAxios()
   const loading = useLoading()
   const admin = useAdmin()
-  const navigate = useNavigate({ from: '/login' })
+  const [_, setLocation] = useLocation()
 
   const onSubmit = handleSubmit(async (data) => {
     try {
@@ -45,7 +41,7 @@ export default function Login() {
     }
     finally {
       loading.setLoad(false)
-      navigate({ to: '/' })
+      setLocation('/')
     }
   })
 

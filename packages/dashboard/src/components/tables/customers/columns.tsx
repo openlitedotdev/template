@@ -1,7 +1,6 @@
 import type { ColumnDef } from '@tanstack/react-table'
 import { Checkbox } from '@openui-org/react'
 import type { Customer } from 'types/index'
-import { CellAction } from './cell-action'
 
 export const columns: ColumnDef<Customer>[] = [
   {
@@ -41,6 +40,6 @@ export const columns: ColumnDef<Customer>[] = [
   },
   {
     id: 'actions',
-    cell: ({ row }) => <CellAction data={row.original} />,
+    cell: () => {},
   },
 ]
