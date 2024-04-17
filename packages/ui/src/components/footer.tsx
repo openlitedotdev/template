@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
+import logoOpenSS from '../../public/logo-black-png.svg'
 
 const openLand = [
   { title: 'Github', path: '/' },
@@ -7,7 +9,7 @@ const openLand = [
 ]
 
 const contact = [
-  { title: 'openland.org@gmail.com', path: '/' },
+  { title: 'openss.org@gmail.com', path: '/' },
   { title: 'Figma', path: '/' },
   { title: 'Team', path: '/' },
 ]
@@ -20,7 +22,7 @@ export async function Footer() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid grid-cols-3 gap-8 py-16">
           <div>
-            <h3 className="text-base font-semibold text-card-foreground">Open Land</h3>
+            <h3 className="text-base font-semibold text-card-foreground">Open Source Sinergy</h3>
             <ul className="mt-4 space-y-4 [&>li]:text-neutral-500">
               {openLand.map((open, index) => {
                 return (
@@ -51,13 +53,13 @@ export async function Footer() {
             Copyright &copy;
             {currentYear}
             {' '}
-            Open Land, Inc.
+            Open Source Sinergy, Inc.
           </p>
-          <p className="flex gap-1 text-sm text-card-foreground">
+          <p className="flex gap-2 text-sm text-card-foreground items-center">
             Powered by
             {' '}
-            <Link target="_blank" href="https://github.com/open-land" className="underline">
-              Open Land
+            <Link href="https://github.com/open-land/commerce" target="_blank">
+              <Image src={logoOpenSS} alt="Open source sinergy" className="size-10 object-contain" />
             </Link>
             {' '}
           </p>
