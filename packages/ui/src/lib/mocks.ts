@@ -47,16 +47,4 @@ export const productsMocks = [
     description: 'This is the description of product 8',
     URL: '/product-test.webp',
   },
-  {
-    name: 'Product 9',
-    price: '13.99',
-    description: 'This is the description of product 9',
-    URL: '/t-shirt-1.avif',
-  },
-  {
-    name: 'Product 10',
-    price: '19.99',
-    description: 'This is the description of product 10',
-    URL: '/product-test.webp',
-  },
 ]
