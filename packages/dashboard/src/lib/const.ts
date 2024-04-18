@@ -1,4 +1,6 @@
-import type { NavItem, SalesItem } from 'types/index'
+import type { NavItem, SalesItem } from 'types'
+
+export const VERSION_API = 'v1'
 
 export const navItems: NavItem[] = [
   {
