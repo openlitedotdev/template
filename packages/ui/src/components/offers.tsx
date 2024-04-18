@@ -16,7 +16,7 @@ export default function Offers() {
 
       </div>
       <div className="md:col-span-2 md:row-span-1">
-        <Product product={{ ...mockProduct, URL: '/product-test.webp' }} />
+        <Product product={{ ...mockProduct, URL: '/demo-image.avif' }} />
       </div>
       <div className="md:col-span-2 md:row-span-1">
         <Product product={mockProduct} />
