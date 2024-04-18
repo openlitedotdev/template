@@ -143,6 +143,13 @@ async def get_user_by_id(id: int, db: Session = Depends(get_db)):
             ),
         )
 
-    results.append(user)
+    results.append(
+        {
+            "name": user.name,
+            "email": user.email,
+            "phone": user.phone,
+            "role": user.role,
+        }
+    )
 
     return http.response(message="User found", db=results)
