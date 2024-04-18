@@ -2,7 +2,7 @@
 
 <img src="./.github/OpenLand.jpeg" align="right" alt="Open Land" width="100" />
 
-This is the source code for [Commerce](https://ui-commerce.up.railway.app/) by Open Land.
+This is the source code for [Commerce](https://ui-commerce.up.railway.app/), [Dashboard](https://dashboard-commerce.up.railway.app/), [Api](https://api-commerce.up.railway.app/) by Open Land.
 
 <br>
 
