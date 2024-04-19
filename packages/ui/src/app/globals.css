@@ -3,11 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+  @font-face {
+    font-family: 'Gotham Medium';
+    src: url('/fonts/GothamSSm-medium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Gotham Bold';
+    src: url('/fonts/GothamSSm-bold.woff2') format('woff2');
+  }
 
   html,
   body {
     scroll-behavior: smooth;
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Gotham Medium', system-ui, sans-serif;
   }
 }
