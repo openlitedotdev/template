@@ -9,17 +9,16 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "test": "pnpm -r --filter=./packages/* test",
-    "lint": "eslint . && pnpm -r --filter=./packages/* lint",
-    "build": "pnpm -r --filter=./packages/* build",
-    "dev": "pnpm -r --filter=./packages/* dev"
+    "lint": "eslint .",
+    "clean": "rm -rf .turbo node_modules pnpm-lock.yaml"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.7.0",
-    "@commitlint/cli": "19.0.3",
-    "@commitlint/config-conventional": "19.0.3",
-    "eslint-plugin-format": "0.1.0",
-    "husky": "9.0.10",
+    "@antfu/eslint-config": "2.15.0",
+    "@commitlint/cli": "19.2.2",
+    "@commitlint/config-conventional": "19.2.2",
+    "eslint": "8.56.0",
+    "eslint-plugin-format": "0.1.1",
+    "husky": "9.0.11",
     "lint-staged": "15.2.2"
   },
   "commitlint": {
