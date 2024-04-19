@@ -8,7 +8,10 @@ export default function HeroVideo() {
         <h4 className="text-2xl">Premium comfort for any season</h4>
         <Button className="w-80 text-lg" variant="secondary">Shop now</Button>
       </div>
-      <video src="/demo-commerce.mp4" muted autoPlay loop className="opacity-90"></video>
+      <video muted autoPlay loop className="opacity-90">
+        <source src="/demo-commerce.webm" type="video/webm" />
+        <source src="/demo-commerce.mp4" type="video/mp4" />
+      </video>
     </section>
   )
 }
