@@ -9,6 +9,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
+    "lint": "eslint .",
     "clean": "rm -rf .turbo node_modules pnpm-lock.yaml"
   },
   "devDependencies": {
