@@ -5,8 +5,6 @@ if [ -d '.venv' ]; then
     export PREFIX=".venv/bin/"
 fi
 
-export SOURCE_FILES="api"
-
 set -x
 
 ${PREFIX}coverage report
