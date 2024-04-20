@@ -53,7 +53,7 @@ def create(
     db.refresh(created_product)
 
 
-def get_by_id(id, current_user, db=Session):
+def get_by_id(id, current_user, db: Session):
     user = (
         db.query(models.User)
         .filter(models.User.email == current_user.get("sub"))
@@ -80,7 +80,7 @@ def edit(
     brand,
     category_id,
     current_user,
-    db=Session,
+    db: Session,
 ):
     user = (
         db.query(models.User)
@@ -127,7 +127,7 @@ def edit(
     return product
 
 
-def delete(id, currrent_user, db=Session):
+def delete(id, currrent_user, db: Session):
     user = (
         db.query(models.User)
         .filter(models.User.email == currrent_user.get("sub"))

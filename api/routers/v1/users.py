@@ -133,7 +133,7 @@ async def get_users(
 async def get_user_by_id(id: int, db: Session = Depends(get_db)):
     results = []
     user = auth.get_user_by_id(id=id, db=db)
-    
+
     if not user:
         raise HTTPException(
             status_code=404,

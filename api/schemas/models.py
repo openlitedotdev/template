@@ -22,7 +22,9 @@ class Category(Base):
     image = Column(String)
     description = Column(String)
     image_publi_id = Column(String)
+
     products = relationship("Product", back_populates="category")
+    banners = relationship("Banner", back_populates="category")
 
 
 class Product(Base):
@@ -39,6 +41,17 @@ class Product(Base):
     quantity = Column(Integer)
     description = Column(String, index=True)
     brand = Column(String)
-    category_id = Column(Integer, ForeignKey("categories.id"))
 
+    category_id = Column(Integer, ForeignKey("categories.id"))
     category = relationship("Category", back_populates="products")
+
+
+class Banner(Base):
+    __tablename__ = "banners"
+
+    id = Column(Integer, primary_key=True)
+    title = Column(String(10))
+    description = Column(String(30))
+
+    category_id = Column(Integer, ForeignKey("categories.id"))
+    category = relationship("Category", back_populates="banners")
