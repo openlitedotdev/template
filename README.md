@@ -6,18 +6,6 @@ This is the source code for [Commerce](https://ui-commerce.up.railway.app/), [Da
 
 <br>
 
-## Project Information
-
-### Features
-
-- Open sources
-- Dashboard
-- Api (Totally open source)
-- Customize
-- Dark Mode support
-- Shopping cart
-- Responsive design
-
 ## Getting started (frontend only)
 
 If you are only interested in making changes to the interface, you can run the
