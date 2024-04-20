@@ -3,6 +3,8 @@
 # Use the Python executable provided from the `-p` option, or a default.
 [ "$1" = "-p" ] && PYTHON=$2 || PYTHON="python3"
 
+
+
 REQUIREMENTS="requirements.txt"
 REQUIREMENTS_DEV="requirements-dev.txt"
 VENV="venv"
@@ -13,7 +15,12 @@ pip install uv
 
 uv $VENV
 
-source ./.venv/bin/activate
+export PREFIX=""
 
-uv pip install -r "$REQUIREMENTS"
-uv pip install -r "$REQUIREMENTS_DEV"
+if [ -d '.venv' ] ; then
+    export PREFIX=".venv/bin/"
+    export PATH=${PREFIX}:${PATH}
+fi
+
+${PREFIX}uv pip install -r "$REQUIREMENTS"
+${PREFIX}uv pip install -r "$REQUIREMENTS_DEV"
