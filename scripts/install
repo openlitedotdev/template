@@ -15,12 +15,5 @@ pip install uv
 
 uv $VENV
 
-export PREFIX=""
-
-if [ -d '.venv' ] ; then
-    export PREFIX=".venv/bin/"
-    export PATH=${PREFIX}:${PATH}
-fi
-
-${PREFIX}uv pip install -r "$REQUIREMENTS"
-${PREFIX}uv pip install -r "$REQUIREMENTS_DEV"
+uv pip install -r "$REQUIREMENTS"
+uv pip install -r "$REQUIREMENTS_DEV"
