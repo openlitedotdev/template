@@ -3,3 +3,5 @@ node_modules
 .venv
 .ruff_cache
 .turbo
+.pytest_cache
+.coverage

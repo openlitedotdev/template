@@ -9,7 +9,7 @@ load_dotenv()
 # SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
 
 engine = create_engine(
-    os.environ.get('SQLALCHEMY_DATABASE_URL'),
+    os.environ.get("SQLALCHEMY_DATABASE_URL"),
     echo=True,
 )
 

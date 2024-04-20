@@ -1,5 +1,5 @@
 import pytest
-from app.bcrypt import get_password_hash, verify_password
+from api.bcrypt import get_password_hash, verify_password
 
 
 @pytest.mark.skip(reason="Error decode -> Sonn solutions...")
