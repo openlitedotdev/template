@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "build": "next build",
-    "start": "next start -p 7003",
+    "start": "next start",
     "lint": "next lint",
     "dev": "next dev --turbo",
     "test": "vitest --run",
