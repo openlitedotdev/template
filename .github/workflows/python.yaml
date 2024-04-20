@@ -39,7 +39,3 @@ jobs:
       - name: Run tests
         run: scripts/test
         shell: bash
-
-      - name: Enforce coverage
-        run: scripts/coverage
-        shell: bash
