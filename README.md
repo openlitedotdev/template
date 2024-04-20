@@ -13,8 +13,8 @@ frontend in a development mode as follows.
 
 ### Prerequisites
 
-- Install pnpm (https://pnpm.io/installation)
-- node (https://nodejs.org/en)
+- Install [pnpm](https://pnpm.io/installation)
+- Install [node](https://nodejs.org/en)
 
 ### Running packages frontend
 
