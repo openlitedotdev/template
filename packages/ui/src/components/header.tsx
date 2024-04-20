@@ -11,7 +11,7 @@ export default function Header() {
         <div className="flex h-16 justify-between gap-8 items-center">
           <div className="flex items-center font-bold">
             <Link href="https://github.com/open-land/commerce" target="_blank" className="text-3xl">
-              Shop
+              Shopped
             </Link>
           </div>
 
