@@ -11,5 +11,7 @@ set -x
 
 pip install uv
 
+uv $VENV
+
 uv pip install -r "$REQUIREMENTS"
 uv pip install -r "$REQUIREMENTS_DEV"
