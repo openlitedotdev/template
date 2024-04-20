@@ -14,6 +14,8 @@ jobs:
       matrix:
         python-version: ['3.10', '3.11', '3.12']
         os: [ubuntu-latest]
+    env:
+      SQLALCHEMY_DATABASE_URL: 'sqlite:///commerce.sqlite'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v5
