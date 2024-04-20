@@ -13,5 +13,7 @@ pip install uv
 
 uv $VENV
 
+source ./.venv/bin/activate
+
 uv pip install -r "$REQUIREMENTS"
 uv pip install -r "$REQUIREMENTS_DEV"
