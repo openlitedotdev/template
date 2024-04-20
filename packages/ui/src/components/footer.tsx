@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import logoOpenSS from '../../public/logo-black-png.svg'
 
 const openLand = [
   { title: 'Github', path: '/' },
@@ -59,7 +57,7 @@ export async function Footer() {
             Powered by
             {' '}
             <Link href="https://github.com/open-land/commerce" target="_blank">
-              <Image src={logoOpenSS} alt="Open source sinergy" className="size-10 object-contain" />
+              Open Source Sinergy, Lab
             </Link>
             {' '}
           </p>
