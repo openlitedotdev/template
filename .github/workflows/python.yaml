@@ -15,7 +15,13 @@ jobs:
         python-version: ['3.10', '3.11', '3.12']
         os: [ubuntu-latest]
     env:
-      SQLALCHEMY_DATABASE_URL: 'sqlite:///commerce.sqlite'
+      SQLALCHEMY_DATABASE_URL: ${{ secrets.SQLALCHEMY_DATABASE_URL }}
+      JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      ALGORITHM: ${{ secrets.ALGORITHM }}
+      CLOUDINARY_URL: ${{ secrets.CLOUDINARY_URL }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v5
