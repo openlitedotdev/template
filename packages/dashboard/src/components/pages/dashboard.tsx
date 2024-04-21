@@ -21,7 +21,7 @@ export default function Dashboard() {
         {admin.credentials && (
           <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
             <div className="flex items-center justify-between space-y-2">
-              <h2 className="text-3xl font-bold tracking-tight text-white">
+              <h2 className="text-3xl font-bold tracking-tight">
                 Hi, Welcome back
                 {' '}
                 {admin.credentials!.name}
@@ -29,7 +29,7 @@ export default function Dashboard() {
                 👋
               </h2>
               <div className="hidden md:flex items-center space-x-2">
-                <Button>Download</Button>
+                <Button className="bg-sky text-white">Download</Button>
               </div>
             </div>
 
@@ -48,7 +48,7 @@ export default function Dashboard() {
               <Card className="col-span-4 md:col-span-3">
                 <CardHeader>
                   <CardTitle>Recent Sales</CardTitle>
-                  <CardDescription className="text-dark-300">
+                  <CardDescription>
                     You made 265 sales this month.
                   </CardDescription>
                 </CardHeader>

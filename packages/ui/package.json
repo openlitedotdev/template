@@ -11,7 +11,7 @@
     "clean": "rm -rf .turbo node_modules"
   },
   "dependencies": {
-    "@openui-org/react": "1.5.3",
+    "@openui-org/react": "1.7.0",
     "embla-carousel-autoplay": "8.0.2",
     "embla-carousel-react": "8.0.2",
     "lucide-react": "0.371.0",
@@ -30,7 +30,7 @@
     "autoprefixer": "10.4.19",
     "clsx": "^2.1.0",
     "embla-carousel": "8.0.2",
-    "eslint": "8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.2",
     "jsdom": "24.0.0",
     "postcss": "8.4.38",
