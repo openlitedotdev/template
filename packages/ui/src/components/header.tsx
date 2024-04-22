@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import { ShoppingCart } from 'lucide-react'
 import { Button } from '@openui-org/react/components'
 import { MobileSidebar } from './mobile-sidebar'
@@ -10,7 +10,7 @@ export default function Header() {
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-8">
         <div className="flex h-16 justify-between gap-8 items-center">
           <div className="flex items-center font-bold">
-            <Link href="https://github.com/open-land/commerce" target="_blank" className="text-3xl">
+            <Link href="/" className="text-3xl">
               Shopped
             </Link>
           </div>
