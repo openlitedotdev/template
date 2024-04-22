@@ -1,15 +1,14 @@
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 
 const openLand = [
-  { title: 'Github', path: '/' },
-  { title: 'About', path: '/' },
-  { title: 'Documentation', path: '/' },
+  { title: 'Github', path: 'https://github.com/open-ss-lab/commerce', target: true },
+  { title: 'About', path: '/about', target: false },
+  { title: 'Documentation', path: '/', target: true },
 ]
 
 const contact = [
-  { title: 'openss.org@gmail.com', path: '/' },
-  { title: 'Figma', path: '/' },
-  { title: 'Team', path: '/' },
+  { title: 'openss.org@gmail.com', path: '/', target: false },
+  { title: 'Team', path: '/', target: false },
 ]
 
 export async function Footer() {
@@ -38,7 +37,7 @@ export async function Footer() {
               {contact.map((open, index) => {
                 return (
                   <li key={index} className="text-sm">
-                    <Link href={open.path}>{open.title}</Link>
+                    <Link href={open.path} target={open.target ? '_blank' : '_self'}>{open.title}</Link>
                   </li>
                 )
               })}

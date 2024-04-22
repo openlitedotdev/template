@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ViewTransitions } from 'next-view-transitions'
 
 import './globals.css'
 
@@ -16,14 +17,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="ligth">
-      <body>
-        <Header />
-        <div className="flex min-h-[calc(100dvh-64px)] flex-col">
-          <main className="flex-1">{children}</main>
-        </div>
-        <Footer />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className="ligth">
+        <body>
+          <Header />
+          <div className="flex min-h-[calc(100dvh-64px)] flex-col">
+            <main className="flex-1">{children}</main>
+          </div>
+          <Footer />
+        </body>
+      </html>
+    </ViewTransitions>
   )
 }
