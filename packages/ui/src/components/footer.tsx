@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 
 const openLand = [
   { title: 'Github', path: '/' },
-  { title: 'About', path: '/' },
+  { title: 'About', path: '/about' },
   { title: 'Documentation', path: '/' },
 ]
 
