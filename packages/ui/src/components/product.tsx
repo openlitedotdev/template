@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import Image from 'next/image'
 import clsx from 'clsx'
 import { ShoppingBag } from 'lucide-react'
@@ -15,7 +15,7 @@ interface ProductProps {
 export function Product(props: ProductProps) {
   return (
 
-    <Link href="#" className="group">
+    <Link href={`/products/${props.product.name?.replace(/ /g, '-').toLowerCase()}`} className="group">
       <div className="bg-muted/90 rounded overflow-hidden transition-all duration-500 relative aspect-square">
         <Image
           src={props.product.URL}
