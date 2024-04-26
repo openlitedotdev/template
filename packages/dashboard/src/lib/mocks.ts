@@ -1,4 +1,4 @@
-import type { Categories, Customer, Product } from 'types/index'
+import type { Categories, Customer, Orders, Product } from 'types/index'
 
 export const productsMocks: Product[] = [
   {
@@ -156,5 +156,43 @@ export const customersMocks: Customer[] = [
     email: 'jondoe@email.com',
     phone: '300789090',
     role: 'user',
+  },
+]
+
+export const OrdersMocks: Orders[] = [
+  {
+    name: 'product1',
+    date: '2021-05-30',
+    customer: 'User 1',
+    total: '100.00',
+    status: 'pending',
+  },
+  {
+    name: 'product2',
+    date: '2022-10-17',
+    customer: 'User 2',
+    total: '200.00',
+    status: 'completed',
+  },
+  {
+    name: 'product3',
+    date: '2023-08-14',
+    customer: 'User 3',
+    total: '300.00',
+    status: 'pending',
+  },
+  {
+    name: 'product4',
+    date: '2024-02-01',
+    customer: 'User 4',
+    total: '400.00',
+    status: 'completed',
+  },
+  {
+    name: 'product5',
+    date: '2022-04-21',
+    customer: 'User 5',
+    total: '500.00',
+    status: 'pending',
   },
 ]
