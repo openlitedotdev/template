@@ -3,6 +3,7 @@ import ProductsByScores from '@/components/products-by-scores'
 import Banners from '@/components/banners'
 import HeroVideo from '@/components/hero-video'
 import CarouselProduct from '@/components/carousel'
+import BannerSecond from '@/components/banners-second'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <section className="mx-auto p-6">
         <CarouselProduct />
       </section>
+      <BannerSecond />
     </>
   )
 }
