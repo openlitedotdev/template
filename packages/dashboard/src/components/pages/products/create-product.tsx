@@ -1,6 +1,7 @@
 import { Button, Input, Label, ScrollArea, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@openui-org/react'
 import { Heading } from '@/components/utils/heading'
 import Layout from '@/layouts/layout'
+import InputFile from '@/components/utils/input-file'
 
 export function CreateProduct() {
   return (
@@ -11,7 +12,7 @@ export function CreateProduct() {
           <form className="flex flex-col gap-4 pt-3">
             <div className="flex flex-col gap-2">
               <Label>Imagenes</Label>
-              <Input type="file" className="" />
+              <InputFile />
             </div>
             <div className="grid sm:grid-cols-2 gap-2">
               <section className="flex flex-col gap-2">

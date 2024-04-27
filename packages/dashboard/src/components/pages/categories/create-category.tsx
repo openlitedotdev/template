@@ -1,6 +1,7 @@
 import { Button, Input, Label } from '@openui-org/react'
 import { Heading } from '@/components/utils/heading'
 import Layout from '@/layouts/layout'
+import InputFile from '@/components/utils/input-file'
 
 export function CreateCategory() {
   return (
@@ -10,8 +11,7 @@ export function CreateCategory() {
         <form className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <Label>Imagenes</Label>
-            {/* <InputFile /> */}
-            <Input type="file" />
+            <InputFile />
           </div>
           <div className="flex gap-2">
             <section className="w-1/2 flex flex-col gap-2">
