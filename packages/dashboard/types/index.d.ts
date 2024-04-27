@@ -14,6 +14,14 @@ export interface Categories {
   description: string
 }
 
+export interface Orders {
+  name: string
+  date: string
+  customer: string
+  total: string
+  status: string
+}
+
 export interface Customer {
   name: string
   email: string
