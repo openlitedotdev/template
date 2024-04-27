@@ -1,4 +1,3 @@
-import { ProductList } from '@/components/product-list'
 import Offers from '@/components/offers'
 import ProductsByScores from '@/components/products-by-scores'
 import Banners from '@/components/banners'
