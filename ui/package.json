@@ -13,7 +13,7 @@
   "dependencies": {
     "@openui-org/react": "1.7.0",
     "@tanstack/react-table": "8.16.0",
-    "axios": "1.6.8",
+    "clsx": "^2.1.1",
     "embla-carousel-autoplay": "8.0.2",
     "embla-carousel-react": "8.0.2",
     "lucide-react": "0.371.0",
@@ -25,6 +25,7 @@
     "recharts": "2.12.5",
     "sharp": "0.33.3",
     "sonner": "^1.4.41",
+    "swr": "^2.2.5",
     "zustand": "4.5.2"
   },
   "devDependencies": {
@@ -34,7 +35,6 @@
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
     "@vitejs/plugin-react": "4.2.1",
-    "clsx": "^2.1.0",
     "embla-carousel": "8.0.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.2",
