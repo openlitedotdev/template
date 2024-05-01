@@ -24,7 +24,9 @@ importers:
         specifier: 15.2.2
         version: 15.2.2
 
-  __typings__: {}
+  tools/hooks: {}
+
+  tools/types: {}
 
   ui:
     dependencies:
@@ -76,7 +78,7 @@ importers:
     devDependencies:
       '@shopped/typings':
         specifier: workspace:*
-        version: link:../__typings__
+        version: link:../tools/types
       '@testing-library/react':
         specifier: 15.0.2
         version: 15.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5741,7 +5743,7 @@ snapshots:
 
   '@vue/compiler-core@3.4.21':
     dependencies:
-      '@babel/parser': 7.24.1
+      '@babel/parser': 7.24.5
       '@vue/shared': 3.4.21
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -5754,7 +5756,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.4.21':
     dependencies:
-      '@babel/parser': 7.24.1
+      '@babel/parser': 7.24.5
       '@vue/compiler-core': 3.4.21
       '@vue/compiler-dom': 3.4.21
       '@vue/compiler-ssr': 3.4.21

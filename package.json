@@ -1,5 +1,5 @@
 {
-  "name": "commerce",
+  "name": "@shopped/monorepo",
   "type": "module",
   "version": "1.0.0",
   "description": "Open sources commerce",
