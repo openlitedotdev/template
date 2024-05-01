@@ -9,11 +9,13 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "lint": "eslint .",
+    "dev": "pnpm -r --filter ui dev",
+    "build": "pnpm -r --filter ui build",
+    "lint": "eslint . --fix",
     "clean": "rm -rf .turbo node_modules pnpm-lock.yaml"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.15.0",
+    "@antfu/eslint-config": "^2.15.0",
     "eslint": "^8.57.0",
     "eslint-plugin-format": "0.1.1",
     "husky": "9.0.11",
