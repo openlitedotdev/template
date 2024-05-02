@@ -5,6 +5,8 @@ import { ArrowLeft } from 'lucide-react'
 import imagen from '@assets/product-test.webp'
 import { ProductAccount } from '@components/pricing/product-account'
 
+export const runtime = 'edge'
+
 export default function Page({ params }: { params: { name: string } }) {
   return (
     <>
