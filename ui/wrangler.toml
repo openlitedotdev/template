@@ -1,0 +1,2 @@
+name = "shopped"
+compatibility_flags = [ "nodejs_compat" ]

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import imagen from '../../../public/t-shirt-1.avif'
+import imagen from '@assets/t-shirt-1.avif'
 
 export default function ProductsPage() {
   return (
