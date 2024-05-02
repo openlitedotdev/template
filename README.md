@@ -1,10 +1,6 @@
-# Commerce
+# Shopped
 
-<img src="./.github/OpenLand.jpeg" align="right" alt="Open Land" width="100" />
-
-This is the source code for [Commerce](https://ui-commerce.up.railway.app/), [Dashboard](https://dashboard-commerce.up.railway.app/), [Api](https://api-commerce.up.railway.app/) by Open Land.
-
-<br>
+This is the source code for [shopped](https://shopped.up.railway.app/) by Open Lab.
 
 ## Getting started (frontend only)
 
@@ -18,11 +14,14 @@ frontend in a development mode as follows.
 
 ### Running packages frontend
 
-1. `pnpm install --frozen-lockfile`
+```sh
+pnpm install --frozen-lockfile
 
-2. `pnpm dev`
+```
 
-3. `http://localhost:3000`, `http://localhost:5173`
+```sh
+pnpm dev # http://localhost:3000
+```
 
 ## Getting started (Backend only)
 
@@ -36,21 +35,16 @@ backend in a development mode as follows.
 
 ### Running backend
 
-1. `uv venv`
+```sh
+uv venv
 
-**Windows Activate**
+# source ./.venv/bin/activate
+# ./.venv/Scripts/activate
+```
 
-2. `./.venv/Scripts/activate.ps1`
-
-**Unix Activate**
-
-3. `source .venv/bin/activate`
-
-4. `uv pip install -r requirements.txt`
-
-5. `uv pip install -r requirements-dev.txt`
-
-6. `./scripts/server.sh`
+```sh
+./scripts/install
+```
 
 ## License
 

@@ -4,7 +4,7 @@ export default eslint({
   formatters: true,
   jsx: true,
   ignores: [
-    'api',
+    './api/*',
     '*.toml',
   ],
   rules: {
