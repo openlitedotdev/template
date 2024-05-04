@@ -2,15 +2,16 @@
   "name": "@shopped/monorepo",
   "type": "module",
   "version": "1.0.0",
-  "description": "Open sources commerce",
+  "description": "Open sources commerce called Shopped",
   "author": "Open Land",
   "license": "MIT",
   "keywords": [],
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "dev": "pnpm -r --filter ui dev",
-    "build": "pnpm -r --filter ui build",
+    "dev": "turbo dev",
+    "ui": "turbo dev --filter=@shopped/ui",
+    "build": "turbo build",
     "lint": "eslint . --fix",
     "clean": "rm -rf .turbo node_modules pnpm-lock.yaml"
   },
@@ -19,7 +20,8 @@
     "eslint": "^8.57.0",
     "eslint-plugin-format": "0.1.1",
     "husky": "9.0.11",
-    "lint-staged": "15.2.2"
+    "lint-staged": "15.2.2",
+    "turbo": "^1.13.3"
   },
   "lint-staged": {
     "*": "eslint . --fix"

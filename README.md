@@ -28,24 +28,6 @@ pnpm dev # http://localhost:3000
 If you are only interested in making changes to the server, you can run the
 backend in a development mode as follows.
 
-### Prerequisites
-
-- Install python (https://www.python.org/downloads/)
-- Install uv (https://github.com/astral-sh/uv/blob/main/README.md#getting-started)
-
-### Running backend
-
-```sh
-uv venv
-
-# source ./.venv/bin/activate
-# ./.venv/Scripts/activate
-```
-
-```sh
-./scripts/install
-```
-
 ## License
 
 commerce is licensed under either of
