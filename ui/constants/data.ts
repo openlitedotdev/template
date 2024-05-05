@@ -1,22 +1,15 @@
-import type { Categories, Customer, Orders, Product } from '@shopped/typings'
+import type { Banners, Categories, Customer, Orders, Product } from '@shopped/typings'
 
-export const banners = [
+export const BannersMocks: Banners[] = [
   {
     title: 'GOLF CLOTHING',
     description: 'NOW AVAILABLE ON PUMA.COM',
     image: '/banner.webp',
-    link: {
-      label: 'Shop Now',
-      path: '/',
-    },
   },
   {
     title: 'COMING SOON',
     description: ' A$AP ROCKY x PUMA LAUNCHES 5/3 AT 10 AM EDT',
-    link: {
-      label: 'Shop now',
-      path: '/',
-    },
+    image: '/banner2.webp',
   },
 ]
 
