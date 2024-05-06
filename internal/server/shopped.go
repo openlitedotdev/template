@@ -1,4 +1,4 @@
-package shopped
+package server
 
 import (
 	"github.com/OpenLab-dev/shopped/internal/db"
