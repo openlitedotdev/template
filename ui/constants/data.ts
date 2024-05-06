@@ -1,4 +1,4 @@
-import type { Banners, Categories, Customer, Orders, Product } from '@shopped/typings'
+import type { Banners, Categories, Coupons, Customer, Orders, Product } from '@shopped/typings'
 
 export const BannersMocks: Banners[] = [
   {
@@ -207,5 +207,43 @@ export const OrdersMocks: Orders[] = [
     customer: 'User 5',
     total: '500.00',
     status: 'pending',
+  },
+]
+
+export const CouponsMocks: Coupons[] = [
+  {
+    coupon: 'CODE1',
+    discount: '10%',
+    min: 20000,
+    expiry: '2022-05-30',
+    status: 'Expired',
+  },
+  {
+    coupon: 'CODE2',
+    discount: '20%',
+    min: 30000,
+    expiry: '2024-10-17',
+    status: 'Active',
+  },
+  {
+    coupon: 'CODE3',
+    discount: '30%',
+    min: 40000,
+    expiry: '2023-08-14',
+    status: 'Active',
+  },
+  {
+    coupon: 'CODE4',
+    discount: '40%',
+    min: 50000,
+    expiry: '2024-02-01',
+    status: 'Active',
+  },
+  {
+    coupon: 'CODE5',
+    discount: '50%',
+    min: 60000,
+    expiry: '2022-04-21',
+    status: 'Active',
   },
 ]
