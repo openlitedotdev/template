@@ -5,13 +5,12 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/OpenLab-dev/shopped/internal/shopped"
+	"github.com/OpenLab-dev/shopped/internal/server"
 	_ "github.com/joho/godotenv/autoload"
 )
 
 func main() {
-
-	app := shopped.NewServerShopped()
+	app := server.NewServerShopped()
 
 	app.RegisterShoppedRoutes()
 	port, _ := strconv.Atoi(os.Getenv("PORT"))

@@ -8,7 +8,7 @@ tmp_dir = "tmp"
 
 [build]
 # Just plain old shell command. You could use `make` as well.
-cmd = "go build -o ./main.exe ./cmd/shopped/main.go"
+cmd = "go build -o ./main.exe ./cmd/api/main.go"
 
 # Binary file yields from `cmd`.
 bin = "main.exe"

@@ -38,10 +38,33 @@ func New() Service {
 		log.Fatal(err)
 	}
 
+	if err := createTable(db); err != nil {
+		log.Fatalf("cannot create table: %v", err)
+	}
+
 	dbInstance = &service{
 		db: db,
 	}
+
 	return dbInstance
+}
+
+func createTable(db *sql.DB) error {
+	_, err := db.Exec(`CREATE TABLE IF NOT EXISTS users (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		name TEXT,
+		lastname TEXT,
+		role TEXT,
+		phone TEXT,
+		email TEXT,
+		password TEXT,
+		created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+		updated_at DATETIME DEFAULT CURRENT_TIMESTAMP)`)
+
+	if err != nil {
+		log.Fatalf("cannot create table: %v", err)
+	}
+	return nil
 }
 
 func (s *service) Health() map[string]string {
