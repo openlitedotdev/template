@@ -4,3 +4,8 @@ dist
 tmp
 *.exe
 *.db
+*.sqlite
+*.sqlite3
+*.pdb
+*.exe~
+*.dll
