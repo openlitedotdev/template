@@ -6,22 +6,18 @@
   "author": "Open Land",
   "license": "MIT",
   "keywords": [],
-  "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "dev": "turbo dev",
-    "ui": "turbo dev --filter=@shopped/ui",
-    "build": "turbo build",
-    "lint": "eslint . --fix",
-    "clean": "rm -rf .turbo node_modules pnpm-lock.yaml"
+    "dev": "pnpm -r --filter ui dev",
+    "build": "pnpm -r --filter ui build",
+    "lint": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.15.0",
     "eslint": "^8.57.0",
     "eslint-plugin-format": "0.1.1",
     "husky": "9.0.11",
-    "lint-staged": "15.2.2",
-    "turbo": "^1.13.3"
+    "lint-staged": "15.2.2"
   },
   "lint-staged": {
     "*": "eslint . --fix"
