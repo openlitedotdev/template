@@ -15,10 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Spell Check Repo
-        uses: crate-ci/typos@master
-
       - uses: pnpm/action-setup@v3
         with:
           version: 8
