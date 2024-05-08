@@ -14,8 +14,8 @@ export default function CreateCategory() {
           <Input type="text" placeholder="Category name" />
         </section>
         <section className="w-1/2 flex flex-col gap-2">
-          <Label>Desciption</Label>
-          <Input type="text" placeholder="Category desciption" />
+          <Label>Description</Label>
+          <Input type="text" placeholder="Category description" />
         </section>
       </div>
       <Button className="w-fit text-base">Create</Button>

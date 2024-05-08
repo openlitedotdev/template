@@ -1,4 +1,4 @@
-name: Ci with Github Actions
+name: Ci with GitHub Actions
 
 on:
   push:
@@ -8,12 +8,23 @@ on:
 
 jobs:
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v3
+
+      - name: Spell Check Repo
+        uses: crate-ci/typos@master
+
+      - name: Package manager setup
+        uses: pnpm/action-setup@v3
         with:
           version: 8
+
       - uses: actions/setup-node@v3
         with:
           node-version: 20.x
