@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <ViewTransitions>
-      <html lang="en" className="ligth">
+      <html lang="en" className="light">
         <body>
           <Toaster />
           {children}

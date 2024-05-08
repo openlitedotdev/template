@@ -16,8 +16,8 @@ export default function CreateProduct() {
           <Input type="text" placeholder="Product name" />
         </section>
         <section className="flex flex-col gap-2">
-          <Label>Desciption</Label>
-          <Input type="text" placeholder="Product desciption" />
+          <Label>Description</Label>
+          <Input type="text" placeholder="Product description" />
         </section>
         <section className="flex flex-col gap-2">
           <Label>Price</Label>
