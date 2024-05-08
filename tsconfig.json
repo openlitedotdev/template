@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "target": "es5",
+    "target": "ES2019",
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./src/*"],
+      "@db/*": ["./db/*"],
       "@assets/*": ["./public/*"],
-      "@components/*": ["./components/*"],
-      "@constants/*": ["./constants/*"],
-      "@hooks/*": ["./hoooks/*"]
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@hooks/*": ["./src/hooks/*"]
     },
     "resolveJsonModule": true,
-    "types": ["vitest/globals"],
     "allowJs": true,
     "strict": true,
     "noEmit": true,
