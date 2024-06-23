@@ -8,12 +8,12 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./*"],
       "@db/*": ["./db/*"],
       "@assets/*": ["./public/*"],
-      "@components/*": ["./src/components/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@hooks/*": ["./src/hooks/*"]
+      "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"],
+      "@hooks/*": ["./hooks/*"]
     },
     "resolveJsonModule": true,
     "allowJs": true,

@@ -1,16 +1,16 @@
 import type { Config } from 'tailwindcss'
-import { react } from '@openui-org/react/plugin'
+import { openui } from '@openlabs/ui/tailwind'
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@openui-org/react/dist/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@openlabs/ui/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: { },
   },
-  plugins: [react],
+  plugins: [openui()],
 }
 export default config
