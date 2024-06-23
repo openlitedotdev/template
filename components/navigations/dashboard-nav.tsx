@@ -3,7 +3,7 @@
 import { Icons } from '@components/utilities/icons'
 import { Link } from 'next-view-transitions'
 import type { Dispatch, SetStateAction } from 'react'
-import type { NavItem } from '@/lib/const'
+import type { NavItem } from '@/utils/const'
 
 interface DashboardNavProps {
   items: NavItem[]

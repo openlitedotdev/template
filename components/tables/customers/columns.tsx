@@ -2,7 +2,7 @@
 
 import type { ColumnDef } from '@tanstack/react-table'
 import { Checkbox } from '@openlabs/ui'
-import type { Customer } from '@/lib/types'
+import type { Customer } from '@/utils/types'
 
 export const columns: ColumnDef<Customer>[] = [
   {

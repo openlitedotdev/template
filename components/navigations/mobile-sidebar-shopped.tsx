@@ -4,7 +4,7 @@ import { AlignJustify } from 'lucide-react'
 import { useState } from 'react'
 import { Button, Sheet, SheetContent, SheetTrigger } from '@openlabs/ui'
 import { DashboardNav } from './dashboard-nav'
-import { navShopped } from '@/lib/constants/nav-items'
+import { navShopped } from '@/utils/constants/nav-items'
 
 export function MobileSidebar() {
   const [open, setOpen] = useState(false)
