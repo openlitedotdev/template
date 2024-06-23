@@ -16,8 +16,8 @@ export default function BannerSecond() {
             5/3 AT 10 AM EDT
           </p>
           <article className="flex gap-2">
-            <Button color="secondary" className="text-xs p-1 md:p-6 md:text-xl">EXPLORE THE COLLECTION</Button>
-            <Button color="secondary" className="text-xs  p-1 md:p-6 md:text-xl">SIGN UP FOR ALERTS </Button>
+            <Button className="text-xs p-1 md:p-6 md:text-xl">EXPLORE THE COLLECTION</Button>
+            <Button className="text-xs  p-1 md:p-6 md:text-xl">SIGN UP FOR ALERTS </Button>
           </article>
         </figure>
       </div>

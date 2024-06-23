@@ -12,7 +12,7 @@ export default function Banners() {
         <figure className="flex-col gap-3 items-center justify-center flex">
           <h2 className="text-xl md:text-4xl font-bold">GOLF CLOTHING</h2>
           <p>NOW AVAILABLE ON PUMA.COM</p>
-          <Button color="secondary">Shop Now</Button>
+          <Button>Shop Now</Button>
         </figure>
       </div>
     </section>
