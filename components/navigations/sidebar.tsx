@@ -1,4 +1,4 @@
-import { navItems } from '@constants/nav-items'
+import { navItems } from '@/lib/constants/nav-items'
 import { DashboardNav } from './dashboard-nav'
 
 export default function Sidebar() {

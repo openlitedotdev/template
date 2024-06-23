@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { Heading } from './utilities/heading'
 import { CellAction } from './cell-actions-banners'
-import { BannersMocks } from '@/constants/data'
+import { BannersMocks } from '@/lib/constants/data'
 
 export default function BannersDashboard() {
   return (

@@ -12,8 +12,8 @@
       "@db/*": ["./db/*"],
       "@assets/*": ["./public/*"],
       "@components/*": ["./components/*"],
-      "@constants/*": ["./constants/*"],
-      "@hooks/*": ["./hooks/*"]
+      "@constants/*": ["./lib/constants/*"],
+      "@hooks/*": ["./lib/hooks/*"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
