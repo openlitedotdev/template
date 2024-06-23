@@ -4,7 +4,7 @@ import { Button, Separator } from '@openlabs/ui'
 import { Plus } from 'lucide-react'
 import { Heading } from '@components/utilities/heading'
 import { DataTable } from '@components/utilities/data-table'
-import { categoriesMocks } from '@constants/data'
+import { categoriesMocks } from '@/lib/constants/data'
 import { Link } from 'next-view-transitions'
 import { columns } from './columns'
 

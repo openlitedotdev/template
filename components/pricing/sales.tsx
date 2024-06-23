@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@openlabs/ui'
 import { Icons } from '@components/utilities/icons'
-import { salesItems } from '@constants/sales-items'
+import { salesItems } from '@/lib/constants/sales-items'
 
 export default function Sales() {
   return (

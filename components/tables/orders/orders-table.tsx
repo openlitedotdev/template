@@ -3,7 +3,7 @@
 import { Separator } from '@openlabs/ui'
 import { Heading } from '@components/utilities/heading'
 import { DataTable } from '@components/utilities/data-table'
-import { OrdersMocks } from '@constants/data'
+import { OrdersMocks } from '@/lib/constants/data'
 import { columns } from './columns'
 
 export default function OrdersTable() {
