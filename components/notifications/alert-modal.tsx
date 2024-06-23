@@ -36,7 +36,7 @@ export const AlertModal: React.FC<AlertModalProps> = ({
           <DialogDescription>This action cannot be undone.</DialogDescription>
         </DialogHeader>
         <div className="pt-6 space-x-2 flex items-center justify-end w-full">
-          <Button disabled={loading} color="outline" onClick={onClose}>
+          <Button disabled={loading} onClick={onClose}>
             Cancel
           </Button>
           <Button disabled={loading} color="error" onClick={onConfirm}>
