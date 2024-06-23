@@ -1,5 +1,5 @@
 import { Product } from './product'
-import { productsMocks } from '@/lib/mocks'
+import { productsMocks } from '@/utils/mocks'
 
 export function ProductList() {
   return (

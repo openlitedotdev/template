@@ -5,7 +5,7 @@ import { Button, Separator } from '@openlabs/ui'
 import { Plus } from 'lucide-react'
 import { Heading } from '@components/utilities/heading'
 import { DataTable } from '@components/utilities/data-table'
-import { productsMocks } from '@/lib/constants/data'
+import { productsMocks } from '@/utils/constants/data'
 import { columns } from './columns'
 
 export default function ProductsTable() {

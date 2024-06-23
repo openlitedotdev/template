@@ -2,7 +2,7 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@openlabs/ui'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Product } from './pricing/product'
-import { productsMocks } from '@/lib/mocks'
+import { productsMocks } from '@/utils/mocks'
 
 export default function CarouselProduct() {
   return (

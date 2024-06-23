@@ -1,7 +1,7 @@
 'use client'
 
 import { Separator } from '@openlabs/ui'
-import { customersMocks } from '@/lib/constants/data'
+import { customersMocks } from '@/utils/constants/data'
 import { DataTable } from '@components/utilities/data-table'
 import { Heading } from '@components/utilities/heading'
 import { columns } from './columns'

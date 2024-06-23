@@ -3,7 +3,7 @@
 import { Button, Separator } from '@openlabs/ui'
 import { Heading } from '@components/utilities/heading'
 import { DataTable } from '@components/utilities/data-table'
-import { CouponsMocks } from '@/lib/constants/data'
+import { CouponsMocks } from '@/utils/constants/data'
 import { Link } from 'next-view-transitions'
 import { Plus } from 'lucide-react'
 import { columns } from './columns'
