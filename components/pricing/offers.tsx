@@ -1,9 +1,9 @@
 import { Product } from './product'
 
 const mockProduct = {
-  name: '',
-  price: '',
-  description: '',
+  name: 'product-1',
+  price: '$10.00',
+  description: 'A product example',
   URL: '/t-shirt-1.avif',
 }
 

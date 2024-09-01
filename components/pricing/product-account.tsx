@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@openlabs/ui'
+import { Button } from '@openlite/ui'
 import { useState } from 'react'
 
 export function ProductAccount() {

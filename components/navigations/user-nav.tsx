@@ -1,6 +1,6 @@
 'use client'
 
-import { Avatar, AvatarFallback, AvatarImage, Button, Dropdown, DropdownContent, DropdownGroup, DropdownItem, DropdownSeparator, DropdownTrigger } from '@openlabs/ui'
+import { Avatar, AvatarFallback, AvatarImage, Button, Dropdown, DropdownContent, DropdownGroup, DropdownItem, DropdownSeparator, DropdownTrigger } from '@openlite/ui'
 
 export default function UserNav() {
   return (

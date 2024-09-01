@@ -1,5 +1,5 @@
 'use client'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@openlabs/ui'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@openlite/ui'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Product } from './pricing/product'
 import { productsMocks } from '@/utils/mocks'

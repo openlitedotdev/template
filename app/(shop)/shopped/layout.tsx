@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import React from 'react'
 import { Footer } from '@/components/navigations/footer-shopped'
-import Header from '@/components/navigations/header-shopped'
+import Header from '@/components/navigations/header'
 
 export const metadata: Metadata = {
   title: 'Shopped Online',

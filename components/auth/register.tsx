@@ -1,4 +1,4 @@
-import { Button, Input, Label, TabsContent } from '@openlabs/ui'
+import { Button, Input, Label, TabsContent } from '@openlite/ui'
 
 export function Register() {
   return (

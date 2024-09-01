@@ -1,7 +1,7 @@
 'use client'
 
 import { Edit, MoreHorizontal, Trash } from 'lucide-react'
-import { Button, Dropdown, DropdownContent, DropdownItem, DropdownLabel, DropdownTrigger } from '@openlabs/ui'
+import { Button, Dropdown, DropdownContent, DropdownItem, DropdownLabel, DropdownTrigger } from '@openlite/ui'
 import { useState } from 'react'
 import type { Orders } from '@/utils/types'
 import { AlertModal } from '@components/notifications/alert-modal'

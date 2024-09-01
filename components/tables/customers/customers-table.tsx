@@ -1,6 +1,6 @@
 'use client'
 
-import { Separator } from '@openlabs/ui'
+import { Separator } from '@openlite/ui'
 import { customersMocks } from '@/utils/constants/data'
 import { DataTable } from '@components/utilities/data-table'
 import { Heading } from '@components/utilities/heading'

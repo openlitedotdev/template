@@ -1,4 +1,4 @@
-import { Button } from '@openlabs/ui'
+import { Button } from '@openlite/ui'
 
 export default function HeroVideo() {
   return (

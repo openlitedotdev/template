@@ -25,7 +25,7 @@ export function Product(props: ProductProps) {
   const handleTouchEnd = () => {
     setIsHovered(false)
   }
-
+  
   return (
 
     <Link
@@ -44,7 +44,7 @@ export function Product(props: ProductProps) {
           priority
         />
         <div
-          className={clsx('w-full h-full flex items-center justify-center bg-card/50 opacity-0 group-hover:opacity-100 transition-all duration-500 absolute', { 'opacity-100': isHovered })}
+          className={clsx('w-full h-full flex items-center justify-center bg-default/40 opacity-0 group-hover:opacity-100 transition-all duration-500 absolute', { 'opacity-100': isHovered })}
         >
           <ShoppingBag className="size-12" />
         </div>

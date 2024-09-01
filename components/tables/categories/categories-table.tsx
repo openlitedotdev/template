@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Separator } from '@openlabs/ui'
+import { Button, Separator } from '@openlite/ui'
 import { Plus } from 'lucide-react'
 import { Heading } from '@components/utilities/heading'
 import { DataTable } from '@components/utilities/data-table'

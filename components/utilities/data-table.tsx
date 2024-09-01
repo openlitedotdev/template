@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Input, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@openlabs/ui'
+import { Button, Input, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@openlite/ui'
 import type { ColumnDef } from '@tanstack/react-table'
 import { flexRender, getCoreRowModel, getFilteredRowModel, useReactTable } from '@tanstack/react-table'
 

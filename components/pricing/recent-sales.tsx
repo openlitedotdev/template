@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@openlabs/ui'
+import { Avatar, AvatarFallback, AvatarImage } from '@openlite/ui'
 
 export default function Sales() {
   return (

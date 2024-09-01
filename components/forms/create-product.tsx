@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Input, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@openlabs/ui'
+import { Button, Input, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@openlite/ui'
 import InputFile from '@components/utilities/input-file'
 
 export default function CreateProduct() {

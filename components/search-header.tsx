@@ -1,4 +1,4 @@
-import { Input } from '@openlabs/ui'
+import { Input } from '@openlite/ui'
 import { SearchIcon } from 'lucide-react'
 
 export function SearchBar() {

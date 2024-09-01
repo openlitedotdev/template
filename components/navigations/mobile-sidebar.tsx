@@ -2,7 +2,7 @@
 
 import { MenuIcon } from 'lucide-react'
 import { useState } from 'react'
-import { Sheet, SheetContent, SheetTrigger } from '@openlabs/ui'
+import { Sheet, SheetContent, SheetTrigger } from '@openlite/ui'
 import { navItems } from '@/utils/constants/nav-items'
 import { DashboardNav } from './dashboard-nav'
 

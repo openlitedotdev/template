@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from '@openlabs/ui'
+import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from '@openlite/ui'
 import Overview from '@components/pricing/overview'
 import RecentSales from '@components/pricing/recent-sales'
 import Sales from '@components/pricing/sales'

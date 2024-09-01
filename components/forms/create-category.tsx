@@ -1,4 +1,4 @@
-import { Button, Input, Label } from '@openlabs/ui'
+import { Button, Input, Label } from '@openlite/ui'
 import InputFile from '@components/utilities/input-file'
 
 export default function CreateCategory() {

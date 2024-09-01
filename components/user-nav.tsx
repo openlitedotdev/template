@@ -1,6 +1,6 @@
 'use client'
 
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTrigger, Tabs, TabsList, TabsTrigger } from '@openlabs/ui'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTrigger, Tabs, TabsList, TabsTrigger } from '@openlite/ui'
 import { User } from 'lucide-react'
 import { Login } from './auth/login'
 import { Register } from './auth/register'

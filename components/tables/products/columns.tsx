@@ -1,7 +1,7 @@
 'use client'
 
 import type { ColumnDef } from '@tanstack/react-table'
-import { Checkbox } from '@openlabs/ui'
+import { Checkbox } from '@openlite/ui'
 import type { Product } from '@/utils/types'
 import { CellAction } from './cell-actions'
 

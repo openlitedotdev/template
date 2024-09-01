@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Button } from '@openlabs/ui'
+import { Button } from '@openlite/ui'
 import banner from '@assets/banner.webp'
 
 export default function Banners() {

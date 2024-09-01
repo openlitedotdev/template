@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@openlabs/ui'
+import { Card, CardContent, CardHeader, CardTitle } from '@openlite/ui'
 import { Icons } from '@components/utilities/icons'
 import { salesItems } from '@/utils/constants/sales-items'
 

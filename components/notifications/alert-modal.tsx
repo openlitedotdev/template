@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@openlabs/ui'
+import { Button, Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@openlite/ui'
 import { useEffect, useState } from 'react'
 
 interface AlertModalProps {
