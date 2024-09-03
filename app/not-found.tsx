@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-export const runtime = 'edge'
-
 export default function NotFoundPage() {
   return (
     <div className="h-screen">
