@@ -34,7 +34,7 @@ export function Product(props: ProductProps) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="bg-muted/90 rounded overflow-hidden transition-all duration-500 relative aspect-square">
+      <div className="rounded overflow-hidden transition-all duration-500 relative aspect-square">
         <Image
           src={props.product.URL}
           alt="Image product test"
@@ -44,7 +44,7 @@ export function Product(props: ProductProps) {
           priority
         />
         <div
-          className={clsx('w-full h-full flex items-center justify-center bg-default/40 opacity-0 group-hover:opacity-100 transition-all duration-500 absolute', { 'opacity-100': isHovered })}
+          className={clsx('w-full h-full flex items-center justify-center bg-default-200/40 opacity-0 group-hover:opacity-100 transition-all duration-500 absolute', { 'opacity-100': isHovered })}
         >
           <ShoppingBag className="size-12" />
         </div>
