@@ -15,7 +15,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="flex h-screen overflow-hidden">
         <Sidebar />
         <main className="w-full pt-16">{children}</main>
-
       </div>
     </>
   )

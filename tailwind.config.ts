@@ -9,7 +9,7 @@ const config: Config = {
     './node_modules/@openlite/ui/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: { },
+    extend: {},
   },
   plugins: [openui()],
 }

@@ -1,4 +1,11 @@
-import { Button, Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@openlite/ui'
+import {
+  Button,
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@openlite/ui'
 import { useEffect, useState } from 'react'
 
 interface AlertModalProps {
@@ -17,16 +24,14 @@ export const AlertModal: React.FC<AlertModalProps> = ({
   const [isMounted, setIsMounted] = useState(false)
 
   const onChange = (open: boolean) => {
-    if (!open)
-      onClose()
+    if (!open) onClose()
   }
 
   useEffect(() => {
     setIsMounted(true)
   }, [])
 
-  if (!isMounted)
-    return null
+  if (!isMounted) return null
 
   return (
     <Dialog open={isOpen} onOpenChange={onChange}>

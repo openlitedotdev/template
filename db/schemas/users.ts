@@ -10,7 +10,9 @@ export const usersTable = sqliteTable('users', {
   createdAt: text('created_at')
     .default(sql`(CURRENT_TIMESTAMP)`)
     .notNull(),
-  updateAt: integer('update_at', { mode: 'timestamp' }).$onUpdate(() => new Date()),
+  updateAt: integer('update_at', { mode: 'timestamp' }).$onUpdate(
+    () => new Date()
+  ),
 })
 
 export type SelectUser = typeof usersTable.$inferSelect

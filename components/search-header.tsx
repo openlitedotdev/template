@@ -3,9 +3,7 @@ import { SearchIcon } from 'lucide-react'
 
 export function SearchBar() {
   return (
-    <form
-      className="group relative my-2 flex w-full items-center justify-items-center text-sm lg:w-80"
-    >
+    <form className="group relative my-2 flex w-full items-center justify-items-center text-sm lg:w-80">
       <label className="w-full">
         <span className="sr-only">search for products</span>
         <Input

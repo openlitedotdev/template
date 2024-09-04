@@ -25,9 +25,8 @@ export function Product(props: ProductProps) {
   const handleTouchEnd = () => {
     setIsHovered(false)
   }
-  
-  return (
 
+  return (
     <Link
       href={`/shopped/products/${props.product.name?.replace(/ /g, '-').toLowerCase()}`}
       className="group"
@@ -44,19 +43,24 @@ export function Product(props: ProductProps) {
           priority
         />
         <div
-          className={clsx('w-full h-full flex items-center justify-center bg-default-200/40 opacity-0 group-hover:opacity-100 transition-all duration-500 absolute', { 'opacity-100': isHovered })}
+          className={clsx(
+            'w-full h-full flex items-center justify-center bg-default-200/40 opacity-0 group-hover:opacity-100 transition-all duration-500 absolute',
+            { 'opacity-100': isHovered }
+          )}
         >
           <ShoppingBag className="size-12" />
         </div>
       </div>
 
-      <div className={clsx('mt-2 flex justify-between', { hidden: !props.product.name })}>
+      <div
+        className={clsx('mt-2 flex justify-between', {
+          hidden: !props.product.name,
+        })}
+      >
         <div className="mb-0.5">
           <h3 className="mt-0.5 text-base font-semibold text-primary relative">
             {props.product.name}
-            <span
-              className="bg-black h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-500 rounded"
-            />
+            <span className="bg-black h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-500 rounded" />
           </h3>
           <p className="mt-1 text-sm text-primary">
             {props.product.description}
@@ -67,6 +71,5 @@ export function Product(props: ProductProps) {
         </p>
       </div>
     </Link>
-
   )
 }

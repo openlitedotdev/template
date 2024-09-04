@@ -17,16 +17,16 @@ export interface AdminState {
 
 export const useAdmin = create(
   persist<AdminState>(
-    set => ({
+    (set) => ({
       credentials: null,
       onLogged(by) {
         set(() => ({ credentials: { ...by } }))
       },
-      onLogout() { },
+      onLogout() {},
     }),
     {
       name: 'admin',
       storage: createJSONStorage(() => sessionStorage),
-    },
-  ),
+    }
+  )
 )

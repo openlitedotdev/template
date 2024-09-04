@@ -10,14 +10,20 @@ export default function Page({ params }: { params: { name: string } }) {
     <>
       <header className="pt-5 px-16">
         <Button asChild size="icon">
-          <Link href="/shopped" className='text-foreground'>
+          <Link href="/shopped" className="text-foreground">
             <ArrowLeft />
           </Link>
         </Button>
       </header>
       <div>
         <div className="flex justify-center p-10 gap-10 flex-wrap">
-          <Image src={imagen} alt="imagen" className="bg-muted/90 object-cover backdrop-brightness-90 object-center aspect-square" width="500" height="500" />
+          <Image
+            src={imagen}
+            alt="imagen"
+            className="bg-muted/90 object-cover backdrop-brightness-90 object-center aspect-square"
+            width="500"
+            height="500"
+          />
           <article className="w-full md:w-[400px] flex flex-col gap-4">
             <h2 className="text-5xl font-bold">{params.name}</h2>
             <p>$10</p>
@@ -25,7 +31,12 @@ export default function Page({ params }: { params: { name: string } }) {
             <Button>Add to cart</Button>
             <figure>
               <h3 className="font-semibold pb-3">Description</h3>
-              <p className="text-sm font-extralight text-foreground">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In illo sint totam numquam, blanditiis consectetur cum magni corrupti assumenda ratione molestiae ducimus dolores, suscipit voluptatem quibusdam ad hic quia tempora.</p>
+              <p className="text-sm font-extralight text-foreground">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+                illo sint totam numquam, blanditiis consectetur cum magni
+                corrupti assumenda ratione molestiae ducimus dolores, suscipit
+                voluptatem quibusdam ad hic quia tempora.
+              </p>
             </figure>
           </article>
         </div>

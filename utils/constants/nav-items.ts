@@ -80,7 +80,7 @@ export const navShopped: NavItem[] = [
     icon: 'help',
     label: 'FAQ',
   },
-{
+  {
     title: 'Dashboard',
     href: '/dashboard',
     icon: 'dashboard',

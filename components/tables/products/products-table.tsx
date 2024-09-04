@@ -16,10 +16,7 @@ export default function ProductsTable() {
           title="Products (10)"
           description="Manage users (Client side table functionalities.)"
         />
-        <Button
-          className="text-xs md:text-sm"
-          asChild
-        >
+        <Button className="text-xs md:text-sm" asChild>
           <Link href="/dashboard/products/create">
             <Plus className="mr-2 size-4" />
             Add New

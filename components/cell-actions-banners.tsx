@@ -1,7 +1,14 @@
 'use client'
 
 import { Edit, MoreHorizontal, Trash } from 'lucide-react'
-import { Button, Dropdown, DropdownContent, DropdownItem, DropdownLabel, DropdownTrigger } from '@openlite/ui'
+import {
+  Button,
+  Dropdown,
+  DropdownContent,
+  DropdownItem,
+  DropdownLabel,
+  DropdownTrigger,
+} from '@openlite/ui'
 import { useState } from 'react'
 import { AlertModal } from '@components/notifications/alert-modal'
 
@@ -30,14 +37,10 @@ export function CellAction() {
           <DropdownLabel>Actions</DropdownLabel>
 
           <DropdownItem>
-            <Edit className="mr-2 h-4 w-4" />
-            {' '}
-            Update
+            <Edit className="mr-2 h-4 w-4" /> Update
           </DropdownItem>
           <DropdownItem onClick={() => setOpen(true)}>
-            <Trash className="mr-2 h-4 w-4" />
-            {' '}
-            Delete
+            <Trash className="mr-2 h-4 w-4" /> Delete
           </DropdownItem>
         </DropdownContent>
       </Dropdown>

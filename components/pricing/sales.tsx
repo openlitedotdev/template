@@ -18,12 +18,9 @@ export default function Sales() {
             </CardHeader>
             <CardContent>
               <h2 className="text-2xl">+573</h2>
-              <p className="text-xs text-dark-300">
-                +201 since last hour
-              </p>
+              <p className="text-xs text-dark-300">+201 since last hour</p>
             </CardContent>
           </Card>
-
         )
       })}
     </>

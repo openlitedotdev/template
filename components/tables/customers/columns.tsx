@@ -10,7 +10,9 @@ export const columns: ColumnDef<Customer>[] = [
     header: ({ table }) => (
       <Checkbox
         checked={table.getIsAllPageRowsSelected()}
-        onCheckedChange={(value: unknown) => table.toggleAllPageRowsSelected(!!value)}
+        onCheckedChange={(value: unknown) =>
+          table.toggleAllPageRowsSelected(!!value)
+        }
         aria-label="Select all"
       />
     ),

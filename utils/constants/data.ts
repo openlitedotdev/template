@@ -1,4 +1,11 @@
-import type { Banners, Categories, Coupons, Customer, Orders, Product } from '@/utils/types'
+import type {
+  Banners,
+  Categories,
+  Coupons,
+  Customer,
+  Orders,
+  Product,
+} from '@/utils/types'
 
 export const BannersMocks: Banners[] = [
   {

@@ -12,19 +12,12 @@ export default function CouponsTable() {
   return (
     <>
       <div className="flex items-start justify-between">
-        <Heading
-          title="Coupons (5)"
-          description="Manage your coupons here."
-        />
-        <Button
-          className="text-xs md:text-sm"
-          asChild
-        >
+        <Heading title="Coupons (5)" description="Manage your coupons here." />
+        <Button className="text-xs md:text-sm" asChild>
           <Link href="/dashboard/coupons/create">
             <Plus className="mr-2 size-4" />
             Add New
           </Link>
-
         </Button>
       </div>
       <Separator />

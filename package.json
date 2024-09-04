@@ -6,6 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "fmt": "prettier --write \"**/*.{astro,ts,tsx,md,mdx,js,cjs,mjs,jsx}\"",
+    "fmt:check": "prettier --check \"**/*.{astro,ts,tsx,md,mdx,js,cjs,mjs,jsx}\"",
     "dev": " next dev --turbo",
     "migrate": "drizzle-kit generate:sqlite",
     "clean": "pnpx rimraf pnpm-lock.yaml node_modules"
@@ -37,6 +39,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.7",
     "postcss": "8.4.44",
+    "prettier": "^3.3.3",
     "tailwindcss": "3.4.10",
     "typescript": "5.5.4"
   },

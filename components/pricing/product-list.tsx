@@ -9,10 +9,7 @@ export function ProductList() {
       className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
     >
       {productsMocks.map((product, index) => (
-        <Product
-          key={index}
-          product={product}
-        />
+        <Product key={index} product={product} />
       ))}
     </ul>
   )
