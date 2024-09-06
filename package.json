@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.10.0",
-    "@openlite/ui": "0.4.3",
+    "@openlite/ui": "0.4.4",
     "@tanstack/react-table": "8.20.5",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.33.0",
